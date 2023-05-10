@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position 속성</title>
+    <style>
+        .box {width: 100px; height: 100px; position: fixed;}
+        .red {background-color: red; left: 0; top: 0;}
+        .green {background-color: green; left: 50px; top: 50px;}
+        .blue {background-color: blue; left: 100px; top: 100px;}
+
+        .fixed {width: 200px; height: 200px; /*position: fixed; left: 0; top: 0;*/ background-color: rgba(255,255,0,.5);}
+
+        /* 
+        position속성은 요소의 위치를 원하는 곳에 지정할 때 사용한다.
+        top, left, right, bottom 속성을 사용해 위치를 지정하고
+        앞뒤 순서를 변경할 때 z-index 속성을 추가한다.
+
+        position: static;(기본값) 작성한 순서대로, 흐름대로 배치되는 원래 위치
+
+        position: relative; 상대위치좌표를 사용해 요소를 배치
+        원래 있던 위치(static으로 기본 지정된 위치)를 기준으로 원하는만큼 요소를 이동시킨다.
+
+        position: absolute; 절대위치좌표를 사용해 요소를 배치
+        (position: 이 지정된)부모요소를 기준으로 원하는 곳에 스티커처럼 붙이는 방식
+
+        position: fixed; 고정위치좌표를 사용해 요소를 배치
+        웹브라우저의 창(뷰포트)을 기준으로 요소를 고정시킨다.(스크롤 내려도 고정됨)
+
+        z-index: 앞뒤 순서 변경
+        앞뒤 순서는 요소를 입력한 순서대로 나중에 입력한 것이 위로 올라온다(기본)
+        범위는 무한대, 음수도 사용 가능
+        요소가 겹쳐질 때 가려지는 것 때문에 앞뒤 순서를 바꿔야 할 때 사용한다.
+        (ex: 레이어 팝업, 드롭다운 메뉴)
+
+
+        */
+    </style>
+</head>
+<body>
+    <div class="red box"></div>
+    <div class="green box"></div>
+    <div class="blue box"></div>
+    <div class="fixed"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

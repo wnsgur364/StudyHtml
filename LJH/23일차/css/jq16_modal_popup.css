@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* font-family: 'Dongle', sans-serif; */
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+body {font-family: 'Dongle', sans-serif; background-color: #eee;}
+
+#popup_btn {width: 50px; height: 50px; background-color: royalblue; color: #fff; cursor: pointer; border-radius: 50%; position: fixed; right: 50px; bottom: 50px; box-shadow: 5px 5px 10px rgba(0,0,0,.3); transition: .5s; font-size: 20px; animation: wiggle 1.5s linear infinite;}
+#popup_btn:hover {background-color: salmon;}
+
+@keyframes wiggle {
+    0% {transform: translateX(-2px);}
+    10% {transform: translateX(0);}
+    20% {transform: translateX(-2px);}
+    30% {transform: translateX(0);}
+}
+
+#modal_box {width: 400px; height: 500px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 50px rgba(0,0,0,.05); position: fixed; right: 150px; bottom: 100px; padding: 10px 20px; box-sizing: border-box; display: none;}
+#modal_box h1 {font-size: 50px; border-bottom: 1px solid #eee; padding: 20px 0;}
+#modal_box p {font-size: 25px; padding-top: 20px;}
+#cancel_btn {font-size: 26px; padding: 0 20px; background-color: royalblue; color: #fff; border-radius: 40px; position: absolute; right: 20px; bottom: 20px; cursor: pointer; font-family: 'Dongle', sans-serif;}
+
+
+/* #modal_box.modal_active {display: block;} */
+/* 내가 css파일 또는 html파일을 수정할 수 있는 경우, 이 방법으로 적용하거나
+id를 class로 변경하는 방법이 제일 BEST다!! */
+
+.modal_active {display: block !important;}
+/* !important 선택자의 우선순위때문에 속성이 적용되지 않을 때 부득이하게 사용하는 경우 우선적용 순위를 줄 수 있다. 속성값 뒤에 한칸 띄고 붙여준다. */

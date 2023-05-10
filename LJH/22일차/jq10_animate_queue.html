@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 애니메이션 제어(queue, dequeue)</title>
+    <style>
+        .txt1 {width: 100px; text-align: center; background-color: pink;}
+    </style>
+</head>
+<body>
+    <p class="txt1">내용1</p>
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(function(){
+
+            // .queue() : 큐의 함수를 반환
+            // .queue(function(){}) : 큐에 함수 추가, 이후 메서드 취소
+            // .dequeue() : 대기중인 애니메이션 삭제 방지
+            
+            $(".txt1").animate({marginLeft: "200px"}, 1000)
+                      .animate({marginTop : "200px"}, 1000)
+                      .queue(function(){                        // 애니메이션 끼워넣기
+                        $(this).css({background: "red"});       // .dequeue를 추가해줬기 때문에 이후 메서드가 삭제되지 않고 실행됨
+                        $(this).dequeue();
+                      })
+                      .animate({marginLeft: 0}, 1000)
+                      .animate({marginTop : 0}, 1000);
+
+            
+
+        });
+    </script>
+</body>
+</html>

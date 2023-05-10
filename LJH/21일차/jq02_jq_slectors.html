@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 선택자</title>
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list1">리스트1-1</li>
+                <li>리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <hr>
+    <div id="wrap1">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>자식 요소 선택자</h1>
+            <p>내용2</p>
+            <p class="txt">내용3</p>
+            <p>내용4</p>
+            <p>내용5</p>
+        </section>
+    </div>
+    <hr>
+    <ul id="wrap2">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li class="txt1">내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <p>hi!</p>
+    </ul>
+
+    <script>
+
+        $(function(){
+
+
+            $("#list1").parent().css("border","2px dashed #f00");
+            // .parent() : 제이쿼리 부모요소 선택 메서드
+
+
+            // $("#wrap li").css("background-color","yellow");
+            $("#wrap").find("li").css("background-color","orange");
+            // .find("하위요소") 하위에 있는 해당 요소를 찾는 제이쿼리 선택자 메서드
+
+
+            // $("#wrap1>h1").css("border","2px solid #f0f");
+            $("#wrap1").children("h1").css("background-color","cyan");
+            // .children("자식요소") 직하위 자식 요소를 선택
+
+            $("#wrap1>section").children().css({
+                "background-color" : "lightgreen",
+                "border" : "3px solid purple"
+            });
+
+
+            var style1 = {
+                "font-size" : "40px",
+                "font-style" : "italic"
+            };
+            var style2 = {
+                "color" : "tomato",
+                "text-decoration" : "underline"
+            };
+            // 이렇게 변수에 css 속성 및 속성값을 저장해둘 수도 있다.(참조변수)
+
+            $(".txt").prev().css(style1);
+            // 선택자.prev() : 선택자를 기준으로 형제관계에 있는 형 요소(이전 요소)
+
+            $(".txt").next().css(style1);
+            // $(".txt + p").css(style1);
+            // 선택자.next() : 선택자를 기준으로 형제관계에 있는 동생 요소(다음 요소)
+
+            $(".txt1").prevAll().css(style2);
+            $(".txt1").nextAll("li").css(style2);
+            // $(".txt1 ~ li").css(style2);
+
+
+
+            $(".txt1").siblings().css("background-color","lime");
+            // 선택자.siblings() : 선택자를 제외한 나머지 형제요소들을 선택
+
+
+        });
+
+    </script>
+</body>
+</html>

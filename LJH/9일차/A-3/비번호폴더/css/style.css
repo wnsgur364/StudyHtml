@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* CSS 초기화 */
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+
+#wrap {width: 1200px; height: 700px; background-color: rgba(0,0,0,.1); margin: auto;}
+
+#header {width: 1200px; height: 100px; background-color: rgba(255,0,0,.2);}
+#header h1 {width: 200px; height: 100px; background-color: rgba(0,0,0,.1); float: left;}
+#nav {width: 800px; height: 100px; background-color: rgba(0,0,0,.2); float: right;}
+.main_menu>li {width: 200px; height: 50px; background-color: rgba(0,0,0,.1); float: left;}
+.main_menu>li>a {width: 200px; height: 50px; display: block; background-color: #333; color: #fff;}
+.sub_menu>li {width: 200px; height: 40px; background-color: rgba(255,255,255,.5); position: relative; z-index: 50;}
+
+#slide {width: 1200px; height: 300px; background-color: rgba(0,255,0,.2);}
+#slide ul {width: 1200px; height: 300px; position: relative;}
+#slide ul li {width: 1200px; height: 300px; background-color: rgba(0,0,0,.1); position: absolute; left: 0; top: 0;}
+
+#contents {width: 1200px; height: 200px; background-color: rgba(255,0,255,.2);}
+#tab {width: 400px; height: 200px; background-color: rgba(0,0,0,.1); float: left;}
+.tab_title {width: 400px; height: 50px; background-color: rgba(0,0,0,.1); border-left: 1px solid red; box-sizing: border-box;}
+.tab_title li {width: 100px; height: 50px; background-color: rgba(0,0,0,.1); float: left;}
+.tab_title li a {width: 100px; height: 50px; display: block; text-align: center; padding-top: 15px; box-sizing: border-box; border-top: 1px solid red; border-right: 1px solid red; background-color: #fff;}
+.tab_title li:first-child a {height: 51px; position: relative; z-index: 10;}
+.tab_container {width: 400px; height: 150px; background-color: rgba(255,0,255,.2); position: relative;}
+.tab_content {width: 400px; height: 150px; background-color: #fff; position: absolute; left: 0; top: 0; border: 1px solid red;}
+
+#banner {width: 400px; height: 200px; background-color: rgba(0,0,0,.2); float: left;}
+#shortcut {width: 400px; height: 200px; background-color: rgba(0,0,0,.3); float: left;}
+
+#footer {width: 1200px; height: 100px; background-color: rgba(0,0,255,.2);}
+#f_logo {width: 200px; height: 100px; background-color: rgba(0,0,0,.1); float: left;}
+#f_menu {width: 1000px; height: 50px; background-color: rgba(0,0,0,.2); float: left;}
+#copyright {width: 1000px; height: 50px; background-color: rgba(0,0,0,.3); float: left;}

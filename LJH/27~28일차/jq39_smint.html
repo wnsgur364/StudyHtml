@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>여러분의 타이틀</title>
+<meta name="author" content="제작자 이름">
+<meta name="keywords" content="제이쿼리, jquery, 자바스크립트, javascipt, js, 풀페이지, 슬라이더, slider" />
+<!-- 페이지가 노출되길 원하는 키워드(페이지에 관련된 키워드)를 전부 다 적어주면 된다. 검색 노출 보장은 없지만 입력해주는게 노출될 확률을 높여준다. -->
+<meta name="description" content="페이지를 간단하게 설명할 수 있는 문구 작성" />
+<meta name="viewport" content="width=device-width">
+
+<link type="text/css" href="css/demo.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="wrap ">
+	<div class="section sTop">
+		<div class="inner">
+			<h1 class="title">SMINT Demo Page</h1>
+			<h2 class="subtitle">Feel free to use this as your starting template</h2>
+		</div>
+	</div>
+
+	<div class="subMenu" >
+	 	<div class="inner">
+	 		<a href="#sTop" class="subNavBtn">Home</a>
+	 		<a href="#s1" class="subNavBtn">Section 1</a> 
+			<a href="#s2" class="subNavBtn">Section 2</a>
+			<a href="#s3" class="subNavBtn">Section 3</a>
+			<a href="#s4" class="subNavBtn">Section 4</a>
+			<a href="#s5" class="subNavBtn">Section 5</a>
+			<a href="https://twitter.com/rabmyself" class="subNavBtn extLink end">External Link</a>
+		</div>
+	</div>
+
+	<div class="section s1">
+		<div class="inner ">
+			<h1>Section 1</h1>
+		</div>
+	</div>
+
+	<div class="section s2">
+		<div class="inner">
+			<h1>Section 2</h1>
+			<p><a href="#s4" class="intLink">Internal Link: Jump to Section 4</a></p>
+			<p><a href="#sTop" class="intLink">Internal Link: Back to Top</a></p>
+		</div>
+	</div>
+
+
+
+	<div class="section s3">
+		<div class="inner">
+			<h1>Section 3</h1>
+		</div>
+	</div>
+
+	<div class="section s4">
+		<div class="inner">
+			<h1>Section 4</h1>
+		</div>
+	</div>
+
+	<div class="section s5">
+		<div class="inner">
+			<h1>Section 5</h1>
+		</div>
+	</div>
+
+	
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script> <!-- jq 라이브러리 파일 1.7.1 -->
+<script type="text/javascript" src="js/jquery.smint.js"></script>
+<script type="text/javascript">
+
+$(function() {
+    $('.subMenu').smint({
+    	'scrollSpeed' : 1000
+    });
+});
+
+</script>
+
+
+</body>
+</html>

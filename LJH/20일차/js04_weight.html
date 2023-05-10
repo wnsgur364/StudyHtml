@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균 체중 구하기</title>
+</head>
+<body>
+    <script>
+
+        var name = prompt("당신의 이름은?");
+        var userHeight = prompt("당신의 키는?");
+        var userWeight = prompt("당신의 몸무게는?");
+
+        // 평균체중 = (신장 - 100) * 0.9;
+        var normalWeight = (userHeight - 100) * 0.9;
+
+        // document.write(normalWeight);
+
+        var diet = userWeight - normalWeight;
+
+        // if(userWeight < normalWeight) {
+        //     document.write("평균체중보다 낮습니다.");
+        // } else {
+        //     document.write("다이어트 시작! " + diet + "kg 빼기!");
+        // }
+
+
+        // 오차범위 +-3
+        var result = userWeight >= normalWeight - 3 && userWeight <= normalWeight + 3;
+                    //  60      >=     60.3     - 3 &&    60      <=     60.3     + 3
+                    //  60      >=     57.3         &&    60      <=     63.3
+
+            result = result ? "적정체중입니다." : "적정체중이 아닙니다.";
+            document.write(name + "님은 " + result);
+        
+
+
+    </script>
+</body>
+</html>

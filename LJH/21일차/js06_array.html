@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열(array)</title>
+</head>
+<body>
+    <script>
+
+        // 배열(array): 하나의 배열 안에 여러 개의 변수를 담아서 사용할 수 있다.(자료들의 집합)
+        // 책장(배열) 안에 책(데이터). 배열 또한 하나의 객체라고 볼 수 있다.
+
+        // 배열 생성 방법 1
+        // var bookCase = new Array();
+        //     bookCase[0] = "js책";
+        //     bookCase[1] = "html책";
+        //     bookCase[2] = "css책";
+
+        // 배열 생성 방법 2
+        // var bookCase = new Array("js책", "html책", "css책");
+
+        // 배열 생성 방법 3
+        // var bookCase = ["js책", "html책", "css책"];
+
+        // 배열 안의 데이터 꺼내 사용하기
+        // bookCase[1];
+        // document.write(bookCase[1]);    // 1번째 인덱스번호의 "html책" 출력
+
+
+        // for문과 배열의 조합으로 cost 배열 안의 모든 변수를 더해 totalCost를 출력
+        // var cost = [85, 42, 37, 10, 22, 8, 15];
+        // var totalCost = 0;
+        // for(var i = 0; i < 7; i++) {
+        //     totalCost = totalCost + cost[i];
+        // // 1회전      =    0      + cost[0]  85 = 85
+        // // 2회전      =   85      + cost[1]  42 = 127
+        // // ... 7회전까지 더함
+        // }
+        // document.write(totalCost);
+        // 이 경우 배열의 데이터 개수가 추가가 되어도 똑같은 값을 가져옴
+        // 값이 삭제가 된 경우에는 NaN = Not a Number(오류)
+
+
+        // 배열의 개수를 파악해 유동적으로 숫자를 처리할 수 있다.
+        // 배열(변수).length 속성 사용(개수 파악)
+        var cost = [85, 42, 37, 10, 22, 8];
+        var totalCost = 0;
+        for(var i = 0; i < cost.length; i++) {
+            totalCost = totalCost + cost[i];
+        // 1회전      =    0      + cost[0]  85 = 85
+        // 2회전      =   85      + cost[1]  42 = 127
+        // ... 7회전까지 더함
+        }
+        document.write(totalCost);
+
+
+    </script>
+</body>
+</html>

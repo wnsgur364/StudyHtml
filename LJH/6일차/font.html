@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트(서체)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@800&family=Permanent+Marker&display=swap');
+        /* font-family: 'Noto Serif Display', serif;
+            font-family: 'Permanent Marker', cursive; */
+
+        /* 에스코어드림 */
+        @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+            
+
+        /* 미원체. 웹폰트로 제공을 하지 않는 경우 웹폰트를 만들어서 사용할 수 있다. transfonter 사이트 기준으로 폰트 파일(otf/ttf) 업로드 후 Family support 체크 여부 확인(ON으로 체크하면 css양식 만들어줌)
+        eot : IE8 이하 / woff : 크롬,오페라,사파리,파폭,IE9이상 / woff2 : 크롬,파폭,오페라.. */
+        @font-face {
+            /* 폰트를 지정하려면 @font-face {} 규칙을 이용해 지정한다. */
+            font-family: 'Miwon'; /* CSS에서 지정할 폰트명(알아보기 쉽게 작성) */
+            src: url('miwon_font/Miwon.eot'); /* 서체 경로 지정 */
+            src: url('miwon_font/Miwon.eot?#iefix') format('embedded-opentype'),
+                url('miwon_font/Miwon.woff2') format('woff2'),
+                url('miwon_font/Miwon.woff') format('woff');
+            font-weight: bold; /* 서체 굵기(두께) : 100 ~ 900 값을 이용. 서체에 따라 지정된 굵기만 사용할 수 있다. 400(normal) / 700(bold) */
+            font-style: normal; /* 서체 모양(서체가 원래 디자인 된 유무에 따라 스타일이 지정이 안될 수 있음) */
+            font-display: swap; /* 서체 적용과 내용을 불러오는 순서 설정 */
+        }
+
+        /* 완도희망체 */
+        @font-face {
+            font-family: 'WandohopeR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        h1 {font-family: 'Miwon'; font-style: oblique;}
+        h2 {font-family: 'Permanent Marker', 'WandohopeR', cursive;}
+        .score_01 {font-family: 'SCoreDream'; font-weight: 100;}
+        .score_02 {font-family: 'SCoreDream'; font-weight: 700;}
+        .score_03 {font-family: 'SCoreDream'; font-weight: 900;}
+    </style>
+</head>
+<body>
+    <h1>"벚꽃 보러 갔다 바가지…이게 5만 원, 심하지 않습니까"</h1>
+    <h2>안녕하세요 hello</h2>
+    <p class="score_01">봄나들이 인파가 몰리고 있는데요, 국내 대표 벚꽃 축제인 진해군항제에 갔다 '바가지'를 썼다는 사연이 눈길을 끌었습니다.</p>
+    <p class="score_02">최근 온라인상에는 화제가 되고 있는 사진 한 장 떠도는데요, 한 누리꾼이 최근 진해군항제 야시장에 다녀와서 자신의 블로그에 올린 글과 사진입니다.</p>
+    <p class="score_03">메뉴판 사진에는 통돼지바베큐 5만 원, 삼겹·쪽갈비 5만 원, 해물파전 2만 원, 순대야채볶음 3만 원, 꼬치어묵 1만 원 등 향토음식관 음식 가격이 담겼습니다.</p>
+    <p>글쓴이는 '충격적 비주얼'이라며 하나도 손대지 않았다고 밝힌 음식 사진도 올렸는데요. "저 바비큐가 5만 원이다. 밑에는 심지어 양배추가 많이 깔려 있는데 이 정도는 심하지 않느냐"고도 했습니다.</p>
+    <p>이에 누리꾼들은 "이젠 벚꽃 보러 다들 일본 갈 듯", "요즘 물가 고려하면 예상 가능한 가격이다" 등의 반응을 보였습니다.</p>
+    <p>출처 : SBS 뉴스 <br>
+    원본 링크 : https://news.sbs.co.kr/news/endPage.do?news_id=N1007132596&plink=STAND&cooper=NAVERMAIN&plink=COPYPASTE&cooper=SBSNEWSEND</p>
+</body>
+</html>

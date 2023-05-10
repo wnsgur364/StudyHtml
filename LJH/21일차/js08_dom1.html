@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li 선택 및 색상 변경</title>
+    <script>
+        window.onload = function(){
+            // 스크립트가 dom 요소를 불러오기 전 실행되는 것을 방지하기 위해 윈도우객체의 onload 이벤트(창이 열리면 문서가 모두 로딩이 끝난 후 실행해라.)
+            // dom 요소를 다뤄야 한다면 안전하게 스크립트를 </body> 전에 넣는 것이 좋다.
+
+            // document.getElementById("hideBtn").onclick = function(){
+            //     document.getElementById("p1").style.visibility = "hidden";
+            // }
+            // document.getElementById("showBtn").onclick = function(){
+            //     document.getElementById("p1").style.visibility = "visible";
+            // }
+
+
+            // 변수를 만들어서 사용
+            var hideButton = document.getElementById("hideBtn");
+            var showButton = document.getElementById("showBtn");
+            var p1 = document.getElementById("p1");
+
+            // hideButton.onclick = function(){
+            //     p1.style.visibility = "hidden";
+            // }
+            // showButton.onclick = function(){
+            //     p1.style.visibility = "visible";
+            // }
+
+
+            // 함수를 만들어서 사용
+            function hideText() {
+                p1.style.visibility = "hidden";
+            }
+            function showText() {
+                p1.style.visibility = "visible";
+            }
+
+            // .addEventListener(); 메서드를 이용하여 이벤트를 등록(이벤트를 실행하는 가장 권장되는 방식)
+            // 장점 : 하나의 이벤트에 여러 함수를 호출할 수 있다. 스크립트 안에서 작성하기 때문에 html과 분리가 가능
+            // 첫번째 인자 : 이벤트 종류
+            // 두번째 인자 : 이벤트가 발생했을 때 실행되는 코드(또는 함수)를 작성
+            
+            hideButton.addEventListener("click", function(){
+                hideText();
+            });
+            showButton.addEventListener("click", function(){
+                showText();
+            });
+
+
+        }
+        
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="listColor">떡볶이</li>
+        <li>튀김</li>
+        <li>순대</li>
+    </ul>
+    <input type="button" value="red" onclick="
+        document.getElementById('listColor').style.color = 'red'
+    ">
+    <input type="button" value="dayMode" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+    ">
+    <input type="button" value="darkMode" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+    ">
+    <p id="p1">Hide 버튼을 누르면 글자가 사라지고 Show 버튼을 누르면 글자가 나타난다.</p>
+    <!-- <input type="button" value="Hide" id="hideBtn" onclick="hideText();">
+    <input type="button" value="Show" id="showBtn" onclick="showText();"> -->
+    <input type="button" value="Hide" id="hideBtn">
+    <input type="button" value="Show" id="showBtn">
+</body>
+</html>

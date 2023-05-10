@@ -1,0 +1,193 @@
+@charset "utf-8" ;
+
+/* 모바일 */
+.center_wrap {width: 100%; height: 100%;}
+body {font-family: 'Noto Sans KR', 'Roboto', sans-serif;}
+h2 {text-align: center;}
+a {color: #000; width: 100%; height: 100%; font-family: 'Noto Sans KR', 'Roboto', sans-serif;}
+
+#header {width: 100%; height: 60px; background-color: #fff; padding: 15px 10px; box-sizing: border-box; position: fixed; z-index: 100;}
+#header .center_wrap {display: flex; justify-content: space-between; align-content: space-between;}
+#m_menu_btn {width: 30px; height: 30px; text-align: center;}
+#m_menu_btn a{width: 100%; height: 100%; font-size: 25px;}
+#top_logo {width: 47px; height: 47px;}
+#top_logo img {width: 100%; height: 100%; transform: translateY(-25%);}
+#m_basket_btn {width: 30px; height: 30px; text-align: center;}
+#m_basket_btn a{width: 100%; height: 100%; font-size: 25px;}
+#gnb_01,
+#gnb_02 {display: none;}
+
+#main_visual {width: 100%; height: 548px;}
+#main_slide {display: none;}
+#main_slide_m img {width: 100%; height: 548px; object-fit: cover;}
+
+#notice {width: 100%; height: 62px; padding: 0 15px; box-sizing: border-box; background-color: #572a31;}
+#notice_box {width: 100%; height: 100%; background: url(../img/notice_icon.png) no-repeat center left; padding-left: 54px; box-sizing: border-box;}
+#notice_box ul {width: 100%; height: 62px; padding: 23px 0; box-sizing: border-box;}
+#notice_box ul a {display: flex; justify-content: space-between; font-size: 14px;}
+
+#toms_menu {width: 100%; height: 633px; padding: 73px 15px 81px 15px; box-sizing: border-box;}
+#toms_menu h2 img {width: 100%; height: 29px; object-fit: scale-down; margin-bottom: 10px;}
+#toms_menu_slide {width: 100%; height: 426px;}
+#toms_menu_slide li {width: 100%; height: 426px;}
+.toms_menu_slide_img {width: 100%; height: 366px; margin: auto;}
+.toms_menu_slide_img img {width: 100%; height: 366px; object-fit: cover;}
+.toms_menu_slide_caption {text-align: center; margin-top: 40px;}
+
+#toms_about {width: 100%; height: 620px; padding: 64px 30px; box-sizing: border-box; color: #572a31; text-align: center; background-image: url(../img/section2_bg_m.jpg); background-size: cover; background-position: bottom;}
+.toms_about_title {font-size: 15px; margin-bottom: 22px;}
+.toms_about_cont {margin-bottom: 51px;}
+#toms_about_btn {width: 83%; height: 100px; margin: auto;}
+#toms_about_btn ul {width: 100%; height: 100px; display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
+#branch_btn {width: 100%; height: 45px; background-color: rgba(0,0,0,.5); padding-top: 15px; box-sizing: border-box;}
+#brand_btn {width: 48%; height: 45px; background-color: rgba(0,0,0,.5); padding-top: 15px; box-sizing: border-box;}
+#new_branch_btn {width: 48%; height: 45px; background-color: rgba(0,0,0,.5); padding-top: 15px; box-sizing: border-box;}
+
+#toms_md {width: 100%; height: 600px; padding: 77px 15px 44px 15px; box-sizing: border-box;}
+#toms_md h2 img {width: 100%; height: 29px; object-fit: scale-down; margin-bottom: 22px;}
+#mdpick {width: 100%; height: 428px;}
+.mdp_slide_img {width: 100%; height: 366px; margin: auto;}
+.mdp_slide_img img {width: 100%; height: 366px; object-fit: cover;}
+.mdp_slide_caption {text-align: center; margin-top: 40px;}
+
+#toms_sns {width: 100%; height: 607px; background-color: rgba(0,0,0,.1); padding: 35px 15px 0 15px; box-sizing: border-box;}
+#toms_sns h2 img {width: 100%; height: 29px; object-fit: scale-down; margin-bottom: 25px;}
+#toms_sns_box {width: 100%; height: 404px;}
+#toms_sns_box ul {display: flex; flex-wrap: wrap;} 
+#toms_sns_box ul li {width: 110px; height: 101px;}
+#toms_sns_box ul li img {width: 100%; height: 100%;}
+
+#footer {width: 100%; background-color: #efefef; padding: 50px 15px 0 15px; box-sizing: border-box; color: #8a8a8a;}
+#footer .center_wrap{position: relative;}
+
+#follow {width: 100%; display: flex; justify-content: left; margin-bottom: 32px;}
+#follow h3 {margin-right: 9px; padding-top: 6px; box-sizing: border-box;}
+#follow ul {display: flex;}
+#follow ul li:not(:last-child) {width: 30px; height: 30px; border-radius: 25px; background-color: #4c4c4c; margin-right: 7px; font-size: 18px; text-align: center; line-height: 1.6;}
+#follow ul li a img {width: 30px; height: 30px;}
+#follow a {width: 30px; height: 30px; color: #efefef;}
+
+#language {width: 100%; margin-bottom: 32px;}
+#language h3 {padding-bottom: 8px; box-sizing: border-box;}
+#language ul li {display: inline-block;}
+
+#customer {width: 100%; margin-bottom: 32px;}
+#customer h3 {padding-bottom: 6px; box-sizing: border-box;}
+#customer p {font-size: 20px; line-height: 1.7;}
+
+#fnb {width: 100%; margin-bottom: 39px; padding-right: 106px; box-sizing: border-box;}
+#fnb ul {width: 224px; height: 81px; display: flex; flex-wrap: wrap;}
+#fnb li a {width: 224px; font-size: 12px; margin: 5px;}
+#fnb ul li:not(:last-child)::after {content: "·"; margin: auto; color: #8a8a8a;}
+#fnb ul li:nth-child(3n)::after {content: "";}
+
+#company {width: 100%; height: 80px; padding-right: 108px; box-sizing: border-box; margin-bottom: 24px; font-size: 11.5px; line-height: 1.5;}
+
+#copyright {font-size: 12px;}
+
+#chatbot {width: 80px; height: 80px; position: fixed; bottom: 11%; right: 3%;}  
+#chatbot img {width: 100%;}
+#top_btn {width: 45px; height: 45px; text-align: center; position: fixed; bottom: 5%; right: 3%; background-color: rgba(0,0,0,.7);}
+#top_btn a {width: 45px; height: 45px; color: #8a8a8a;}
+#top_btn a i {width: 45px; height: 45px; font-size: 20px; line-height: 45px; text-align: center; }
+
+/* 테블릿 */
+@media screen and (min-width: 768px){
+    #main_visual {height: 324px;}
+    #main_slide {display: block;}
+    #main_slide img {width: 100%;}
+    #main_slide_m {display: none;}
+
+    #notice {height: 60px; padding: 0 30px;}
+    #notice_box {padding-left: 67px;}
+
+    #toms_menu_slide {height: 334px;}
+    #toms_menu h2 img {margin-bottom: 34px;}
+    #toms_menu_slide li {width: 246px; height: 334px;}
+    .toms_menu_slide_img {width: 246px; height: 334px; margin: 0;}
+    .toms_menu_slide_img img {height: 272px;}
+
+    #toms_about {height: 474px; padding: 54px 15px 47px 302px; box-sizing: border-box; color: #572a31; text-align: left; background-image: url(../img/section2_bg.jpg); }
+    .toms_about_title {font-size: 35px; text-align: left; margin-bottom: 25px;}
+    .toms_about_cont {width: 100%; height: 126px; line-height: 1.6;}
+    #toms_about_btn {width: 100%; height: 50px; text-align: center; }
+    #branch_btn {width: 33%; height: 50px;}
+    #brand_btn {width: 33%; height: 50px;}
+    #new_branch_btn {width: 33%; height: 50px;}
+
+    #toms_md {height: 530px;}
+    #toms_md h2 img {margin-bottom: 34px;}
+    #mdpick li {width: 246px; height: 336px;}
+    .mdp_slide_img {width: 246px; height: 273px; margin: 0;}
+    .mdp_slide_img img {height: 273px;}
+
+    #toms_sns {height: 500px;}
+    #toms_sns h2 img {margin-bottom: 34px;}
+    #toms_sns_box {height: 272px;}
+    #toms_sns_box ul li {width: 147px; height: 136px;}
+
+    #fnb ul {width: 333px; height: 56px;}
+    #fnb ul li:nth-child(3n)::after {content: "·";}
+    #fnb ul li:nth-child(5)::after,
+    #fnb ul li:last-child::after {content: "";}
+
+    #company {width: 100%; height: 38px; padding-right: 254px;}
+    #company p:nth-of-type(2),
+    #company p:nth-of-type(3) {float: left; margin-right: 4px;}   
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 1400px) {
+    .center_wrap {width: 1400px; margin: auto;}
+
+    #header {height: 140px; padding: 25px 0 0 0;}
+    #header .center_wrap {position: relative;}
+    #gnb_01,
+    #gnb_02 {display: block;}
+    #m_menu_btn,
+    #m_basket_btn {display: none;}
+    #top_logo {width: 94px; height: 94px; transform: translateY(20%);}
+    #gnb_01 {width: 301px; height: 17px; position: absolute; right: 0; top: 25px;}
+    #gnb_01 ul {display: flex; justify-content: space-between;}
+    #gnb_02 {width: 672px; height: 22px; position: absolute; right: 0; top: 68px;}
+    #gnb_02 ul {display: flex; justify-content: space-between;}
+
+    #main_visual {width: 100%; height: 804px;}
+    #main_visual .center_wrap {width: 100%; margin: 0;}
+    #main_slide img {height: 804px; overflow: visible; object-fit: contain;}
+
+    #notice_box {height: 70px;}
+    #notice_box ul {width: 1260px; height: 70px; display: flex; justify-content: space-between; align-items: space-between;}
+    #notice_box ul li {width: 553px; height: 70px;}
+
+    #toms_menu {height: 855px;}
+    #toms_menu_slide {width: 1398px; height: 585px;}
+    #toms_menu_slide li {width: 466px; height: 585px;}
+    .toms_menu_slide_img {width: 466px; height: 518px;}
+    .toms_menu_slide_img img {width: 466px; height: 518px;}
+
+    #toms_about {width: 100%; height: 600px; background-size: contain; background-repeat: no-repeat; background-position: center; padding: 0;}
+    #toms_about .center_wrap {padding: 111px 0 93px 743px; box-sizing: border-box;}
+    .toms_about_cont {width: 666px; height: 113px; font-size: 20px;}
+    #toms_about_btn ul {width: 663px; height: 60px;}
+
+    #toms_md {height: 822px;}
+    #mdpick li {width: 466px; height: 588px;}
+    .mdp_slide_img {width: 466px; height: 520px;}
+    .mdp_slide_img img {height: 520px;} 
+
+    #toms_sns {height: 771px;}
+    #toms_sns h2 img {margin-bottom: 136px;}
+    #toms_sns_box {height: 515px;}
+    #toms_sns_box ul li {width: 280px; height: 256px;}
+
+    #footer {height: 376px;}
+    #footer .center_wrap {position: relative;}
+    #language {display: none;}
+    #customer {width: 400px; height: 93px; position: absolute; left: 0;}
+    #fnb {width: 700px; height: 60px; position: absolute; left: 400px;}
+    #follow {width: 251px; height: 36px; position: absolute; right: 0;}
+    #company {width: 700px; height: 47px; position: absolute; left: 400px; top: 101px;}
+    #copyright {position: absolute; left: 400px; top: 169px;}
+
+}

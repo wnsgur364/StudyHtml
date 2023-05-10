@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+a {text-decoration: none;}
+body {font-family: 'Roboto', 'Noto Sans KR', sans-serif;}
+
+/* 센터랩 공통 */
+.center_wrap {margin: auto;}
+.center_wrap h2 {padding: 70px 0 24px; text-align: center; font-weight: normal; font-size: 26px;}
+.center_wrap h2 .tit_bold {font-weight: bold;}
+
+/* 접근성 대체텍스트 안보이게 처리 */
+.blind {display: block; position: absolute; left: -9999px; top: -9999px;}
+
+/* 모바일 버전 */
+
+/* 헤더 */
+#header {width: 100%; height: 60px; position: fixed; left: 0; top: 0; background-color: #fff; z-index: 9999; box-shadow: 0 0 10px rgba(0,0,0,.15);}
+#header h1 {width: 47px; height: 47px;}
+#header h1 img {width: 100%; height: 100%;} 
+#header .center_wrap {height: 100%; display: flex; position: relative; justify-content: center; align-items: center;}
+
+.m_nav_btn {width: 30px; height: 30px; position: absolute; top: 15px; display: flex; justify-content: center; align-items: center; font-size: 20px;}
+.m_nav_btn a {color: #333;}
+#m_open_btn {left: 10px;}
+#m_mall_btn {right: 10px;}
+
+/* 데스크탑 메뉴 삭제 */
+#gnb_pc, 
+#lnb_pc {display: none;}
+
+/* 모바일 메뉴 스타일 */
+#lnb_m_bg {width: 100%; height: 100%; background-color: rgba(0,0,0,.7); position: fixed; left: 0; top: 0; z-index: 9990; display: none;} 
+
+#lnb_m {width: 270px; height: 100%; background-color: #fff; position: fixed; left: -300px; top: 0; z-index: 9999;}
+/* position: fixed인 경우 height 100% 적용 가능. 단, 위치값 (left, top) 적용해야 함! */
+
+#lnb_m #lnb_m_logo {height: 60px; border-bottom: 1px solid #ccc; display: flex; justify-content: center; align-items: center;}
+#lnb_m #lnb_m_logo img {width: 160px;}
+
+#lnb_m .main_menu {max-height: 450px; overflow-y: auto;}
+#lnb_m .main_menu>li>a {display: block; height: 50px; border-bottom: 1px solid #ccc; padding: 18px 15px 0 15px; box-sizing: border-box; color: #000;}
+#lnb_m .main_menu>li>a.sub_down {background: url(../img/nav_down.png) no-repeat right 15px center / 15px;}
+#lnb_m .main_menu>li>a.sub_up {background: #572a31 url(../img/nav_up.png) no-repeat right 15px center / 15px; color: #fff; border: 0;}
+
+#lnb_m .sub_menu>li>a {display: block; height: 45px; border-bottom: 1px solid #eee; background-color: #f4f4f4; color: #666; padding: 15px 0 0 30px; box-sizing: border-box; font-size: 15px;}
+
+#lnb_m .sub_menu_3depth {background-color: #fff; padding: 30px 0 0 40px; box-sizing: border-box;}
+#lnb_m .sub_menu_3depth>li>a {width: 100%; display: block; margin-bottom: 20px; font-size: 14px; color: #888;}
+
+#lnb_lang_m {padding-top: 30px; font-size: 14px;}
+#lnb_lang_m ul {display: flex; justify-content: center;}
+#lnb_lang_m ul li:first-child::after {content: "|"; margin: 0 10px; color: #ccc;}
+#lnb_lang_m ul li a {color: #777;}
+
+#m_close_btn {color: #fff; position: absolute; right: -30px; top: 15px; font-size: 26px;}
+
+/* 메인비쥬얼 */
+#main_visual {width: 100%; margin-top: 60px;}
+#main_visual ul li {width: 100%;}
+#main_visual ul li a {display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; padding-bottom: calc(1144 / 750 * 100%);}
+/* 이미지를 배경으로 넣는 경우, 내용이 없으면 높이를 가질 수가 없음.
+height가 없는 경우 padding을 이용해 이미지의 너비에 대한 높이값의 비율로 사이즈를 준다.
+calc( 높이 / 너비 * 100% ) */
+#main_visual ul li:first-child a {background-image: url(../img/main_slide_01_m.jpg);}
+/* #main_visual ul li:nth-child(2) a {background-image: url(../img/main_slide_02_m.jpg);}
+#main_visual ul li:nth-child(3) a {background-image: url(../img/main_slide_03_m.jpg);}
+#main_visual ul li:nth-child(4) a {background-image: url(../img/main_slide_04_m.jpg);}
+#main_visual ul li:nth-child(5) a {background-image: url(../img/main_slide_05_m.jpg);}
+#main_visual ul li:last-child a {background-image: url(../img/main_slide_06_m.jpg);} */
+
+/* 노티스 */
+#notice {width: 100%; height: 62px; color: #fff; background-color: #572a31;}
+#notice .center_wrap {padding-left: 70px; padding-right: 15px; background: url(../img/notice_icon.png) no-repeat 5px; height: 62px;}
+#notice li {display: flex; height: 62px; align-items: center;}
+#notice li a.notice_tit {display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-right: auto; color: #fff;}
+#notice li span.notice_date {margin: 0 10px;}
+#notice li:not(:first-child) {display: none;}
+
+/* 탐탐메뉴, MD픽 공통 스타일 */
+#toms_menu,
+#toms_md {width: 100%; text-align: center; padding-bottom: 60px;}
+#toms_menu .center_wrap,
+#toms_md .center_wrap {padding: 0 15px;}
+.toms_menu_slide_img,
+.mdp_slide_img {width: 100%; margin: 0;}
+.toms_menu_slide_img a,
+.mdp_slide_img a {width: 100%; display: block;}
+.toms_menu_slide_img a img,
+.mdp_slide_img a img {width: 100%; object-fit: cover;}
+.toms_menu_slide_caption,
+.mdp_slide_caption {padding-top: 40px; font-size: 18px; font-weight: bold;}
+#toms_menu_slide li:not(:first-child),
+#mdp_slide li:not(:first-child) {display: none;}
+
+/* 슬라이드 이전/다음 버튼 */
+.slide_container {position: relative;}
+.slide_btn {width: 100%; position: absolute; top: 50%; transform: translateY(-40px); z-index: 50;}
+.slide_btn a {padding: 10px; color: #000; font-size: 30px;}
+.slide_btn_prev {position: absolute; left: 0;}
+.slide_btn_next {position: absolute; right: 0;}
+
+/* 탐스 어바웃 */
+#toms_about {width: 100%; padding-bottom: 70vw; text-align: center; color: #572a31; 
+    background-image: url(../img/section2_bg_m.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: cover;
+    word-break: keep-all; /* 단어 안깨지게(줄바꿈 안되게) 설정 */
+}
+#toms_about h3 {font-size: 19px; padding-top: 65px;}
+#toms_about h2 {font-size: 26px; padding: 10px 0 30px; font-weight: bold;}
+#toms_about p {line-height: 1.6; margin-bottom: 50px;}
+#toms_about a {display: flex; width: 48%; height: 45px; border: 1px solid #572a31; justify-content: center; align-items: center; color: #572a31; background-color: #ece0db; font-weight: bold;}
+#toms_about_btn a:first-child {width: 100%; color: #ece0db; background-color: #572a31;}
+#toms_about_btn {display: flex; flex-wrap: wrap; height: 100px; padding: 0 30px; justify-content: space-between;}
+
+/* SNS */
+#toms_sns {width: 100%; padding-bottom: 110px;}
+#toms_sns ul {display: flex; flex-wrap: wrap; padding: 0 15px;}
+#toms_sns ul li {width: calc(100% / 3);}
+#toms_sns ul li img {width: 100%; height: 100%; object-fit: cover;}
+
+/* 푸터 */
+#footer {width: 100%; background-color: #efefef; padding: 50px 15px 60px; box-sizing: border-box;} 
+#footer h4 {font-weight: normal; font-size: 14px; color: #4c4c4c;}
+#footer #sns {display: flex; align-items: center; margin-bottom: 30px;}
+#footer #sns h4 {margin-right: 10px;}
+#footer #sns ul {width: 140px; height: 30px; display: flex; justify-content: space-between;}
+#footer #sns a {width: 30px; height: 30px; display: flex;  justify-content: center; align-items: center; background-color: #4c4c4c; color: #efefef; border-radius: 50%;}
+#footer #sns a:last-child {background-color: transparent;}
+#footer #sns a img {width: 100%;}
+
+#footer #lang ul {display: flex;}
+#footer #lang ul li {margin: 10px 10px 35px 0;}
+#footer #lang ul li a {color: #333; font-weight: bold;}
+
+#footer #cs {margin-bottom: 30px;}
+#footer #cs h4 {color: #572a31; margin-bottom: 10px;} 
+#footer #cs a {color: #572a31; font-size: 26px; font-weight: 300;}
+
+#footer #fnb {margin-bottom: 40px; overflow: hidden; font-size: 14px;}
+#footer #fnb li {float: left; margin-bottom: 10px;}
+#footer #fnb li a {color: #572a31;}
+#footer #fnb li::after {content: "·"; margin: 0 8px; color: #572a31;}
+#footer #fnb li:nth-child(4), 
+#footer #fnb li:nth-child(7) {clear: both;} /* clear를 해줌으로써 줄바꿈 효과를 준다. */
+#footer #fnb li:nth-child(3)::after, 
+#footer #fnb li:nth-child(6)::after,
+#footer #fnb li:last-child::after {content: "";}
+#footer #fnb::after {content: ""; display: block; clear: both;} 
+/* clearfix : float된 요소들을 감싸는 부모요소의 내부 뒷쪽에 클리어 용도의 빈 박스를 추가 */
+
+#footer #company {font-size: 13px; line-height: 1.5; color: #888;}
+#footer #company span {margin-right: 10px; word-break: keep-all; white-space: nowrap;}
+#footer #company span:nth-child(5) {display: block;}
+#footer #company p {margin-top: 20px;}
+
+/* 챗봇, 맨위로 공통 */
+.bottom_fix_btn {display: block; position: fixed; right: 10px;}
+
+/* 챗봇 */
+#chatbot {bottom: 105px; width: 80px; height: 80px; z-index: 9999;}
+#chatbot img {width: 100%;}
+
+/* 맨위로로 */
+#gotop {bottom: 50px; width: 45px; height: 45px; background-color: rgba(0,0,0,.7); color: #fff; display: flex; justify-content: center; align-items: center; font-size: 20px; box-shadow: 0 5px 10px rgba(0,0,0,.2); z-index: 9999;}
+
+/* 테블릿 버전 */
+
+@media screen and (min-width: 768px) {
+
+    .center_wrap h2 {font-size: 40px;}
+
+    /* 메인비쥬얼 */
+    #main_visual ul li a {padding-bottom: calc(835 / 2000 * 100%);}
+    #main_visual ul li:first-child a {background-image: url(../img/main_slide_01.jpg);}
+    /* #main_visual ul li:nth-child(2) a {background-image: url(../img/main_slide_02.jpg);}
+    #main_visual ul li:nth-child(3) a {background-image: url(../img/main_slide_03.jpg);}
+    #main_visual ul li:nth-child(4) a {background-image: url(../img/main_slide_04.jpg);}
+    #main_visual ul li:nth-child(5) a {background-image: url(../img/main_slide_05.jpg);}
+    #main_visual ul li:last-child a {background-image: url(../img/main_slide_06.jpg);} */
+
+    /* 탐탐메뉴, MD픽 공통 스타일 */
+    #toms_menu,
+    #toms_md {padding-bottom: 80px;}
+
+    #toms_menu_slide,
+    #mdp_slide {display: flex;}
+    #toms_menu_slide_li,
+    #mdp_slide_li {width: calc(100% / 3);}
+
+    #toms_menu_slide li:nth-child(2),
+    #toms_menu_slide li:nth-child(3),
+    #mdp_slide li:nth-child(2),
+    #mdp_slide li:nth-child(3) {display: block;}
+
+    /* 탐스 어바웃 */
+    #toms_about {padding-bottom: 50px; text-align: left; background-image: url(../img/section2_bg.jpg);}
+
+    #toms_about .center_wrap {display: flex; justify-content: flex-end;}
+
+    #toms_about_box {width: 65%; padding-right: 15px;}
+    #toms_about h3 {font-size: 40px; font-weight: 400;}
+    #toms_about h2 {font-size: 50px; text-align: left;}
+
+    #toms_about a {width: 32%;}
+    #toms_about_btn a:first-child {width: 32%;}
+    #toms_about_btn {height: 50px; padding: 0;}
+    
+    /* SNS */
+    #toms_sns ul li {width: 20%;}
+
+    /* 푸터 */
+    #footer #fnb li:nth-child(4), 
+    #footer #fnb li:nth-child(7) {clear: none;} /* 모바일 */
+
+    #footer #fnb li:nth-child(6) {clear: both;} /* 테블릿 */
+
+    /* float, clear 해제 명령어 none */
+
+    #footer #fnb li:nth-child(3)::after, 
+    #footer #fnb li:nth-child(6)::after {content: "·";} /* 모바일 */
+
+    #footer #fnb li:nth-child(5)::after {content: "";} /* 테블릿 */
+
+    #footer #company span:nth-child(5) {display: initial;}
+    /* CSS 속성값 중 
+    initial : 초기값으로 되돌림
+    inherit : 부모요소의 상속을 따르게 함 */
+}
+
+/* 데스크탑 버전 */
+
+@media screen and (min-width: 1400px) {
+
+    .center_wrap {width: 1400px; box-sizing: border-box;}
+    .center_wrap h2 {font-size: 46px; padding-bottom: 40px;}
+
+    /* 헤더 */
+    #header {height: 140px;}
+    #header .center_wrap {display: block;}
+
+    #header h1 {width: 94px; height: 94px; position: absolute; left: 0; top: 23px; padding: 0;}
+
+    /* 메인비쥬얼 */
+    #main_visual {margin-top: 140px;}
+    #main_visual .center_wrap {width: inherit;}
+
+    /* 모바일 헤더 버튼 삭제 */
+    #m_open_btn,
+    #m_mall_btn {display: none;}
+    
+    /* 데크탑 헤더 메뉴 */
+    #gnb_pc {display: block; margin-bottom: 26px;}
+    #gnb_pc ul {display: flex; justify-content: flex-end; padding-top: 25px; font-size: 14px;}
+    #gnb_pc ul li:not(:last-child)::after {content: "|"; margin: 0 8px;}
+    #gnb_pc ul li a {color: #666;}
+
+    /* 대분류 메뉴 */
+    #lnb_pc {display: block; width: 100%; height: 40px;}
+    #lnb_pc .main_menu {display: flex; justify-content: flex-end;}
+    #lnb_pc .main_menu>li {margin-left: 40px; position: relative;}
+    #lnb_pc .main_menu>li>a {font-size: 19px; font-weight: 300; color: #000;}
+    #lnb_pc .main_menu>li>a:hover {color: #572a31;}
+
+    /* 중분류 메뉴 */
+    #lnb_pc .sub_menu {background-color: #fff; position: absolute; left: 50%; top: 40px; padding: 70px 30px 50px; transform: translateX(-50%); box-shadow: 0 0 10px rgba(0,0,0,.15); display: none;}
+    #lnb_pc .sub_menu a:hover {text-decoration: underline;}
+    #lnb_pc .sub_menu_01 {width: 80px;}
+    #lnb_pc .sub_menu_03 {width: 140px;}
+    #lnb_pc .sub_menu_04 {width: 140px;}
+    #lnb_pc .sub_menu_05 {width: 680px; left: -138px;}
+    #lnb_pc .sub_menu_05>li,
+    #lnb_pc .sub_menu_06>li {float: left; width: 170px;}
+    #lnb_pc .sub_menu_06 {width: 340px; left: -102px;}
+    #lnb_pc .sub_menu>li {margin-bottom: 20px;}
+    #lnb_pc .sub_menu>li>a {color: #333; font-weight: bold;}
+
+    /* 소분류 메뉴 */
+    #lnb_pc .sub_menu_3depth>li {margin-top: 20px;}
+    #lnb_pc .sub_menu_3depth>li>a {color: #888; font-size: 14px;}
+
+    /* 모바일 메뉴 가림 */
+    #lnb_m {display: none;}
+
+    /* 노티스 */
+    #notice ul {display: flex; justify-content: space-between;}
+    #notice li {width: 45%;} 
+    #notice li:nth-child(2) {display: flex;}
+
+    /* 탐탐메뉴, MD픽 슬라이드 이미지 hover효과 */
+    .toms_menu_slide_img a,
+    .mdp_slide_img a {position: relative;}
+
+    .toms_menu_slide_img a::after,
+    .mdp_slide_img a::after {content: ""; display: block; width: 100%; height: 100%; border: 1px solid #fff; box-sizing: border-box; position: absolute; left: 0; top: 0; opacity: 0; transition: .5s;}
+
+    .toms_menu_slide_img a:hover::after,
+    .mdp_slide_img a:hover::after {opacity: 1; transform: scale(0.95);}
+
+    .toms_menu_slide_img img,
+    .mdp_slide_img img {vertical-align: top;}
+
+    /* 탐스 어바웃 */
+    #toms_about {padding-bottom: 100px;}
+    #toms_about_box {width: 48%;}
+    #toms_about h3 {padding-top: 100px; font-size: 48px; letter-spacing: -2px;}
+    #toms_about h2 {font-size: 70px;}
+    #toms_about p {font-size: 24px;}
+    #toms_about a {font-size: 24px; height: 60px;}
+
+    /* SNS */
+    #toms_sns ul li {overflow: hidden;}
+    #toms_sns ul li img {transition: 0.5s;}
+    #toms_sns ul li img:hover {transform: scale(1.05);}
+
+    /* 푸터 */
+    #footer #lang {display: none;}
+
+    #footer {overflow: hidden;}
+    
+    #footer h4 {font-size: 16px;}
+
+    #footer #sns {float: right;}
+
+    #footer #cs {float: left; width: 400px; height: 180px;}
+    #footer #cs a {font-size: 38px;}
+
+    #footer #fnb {float: left; width: 700px; height: 60px; font-size: 16px;}
+    #footer #fnb li {margin-bottom: 16px;}
+
+    #footer #company {float: left; width: 700px; height: 85px; font-size: 14px;}
+    
+    /* 챗봇 */
+    #chatbot {width: 90px; height: 90px;}
+}

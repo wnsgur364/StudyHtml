@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손(하위) 선택자와 자식(직하위) 선택자</title>
+    <style>
+        #header > h1 {color: red; font-size: 30px;}
+        /* header라는 아이디를 갖고있는 요소의 '자식' 중 h1을 선택, 글자색 빨갛게
+        부모 > 자식 형태로 작성한다.(직하위에 있는 요소만 선택)  */
+
+        #header > div > h1 {background-color: yellow;}
+        /* header라는 아이디를 갖고있는 요소의 '자식' 중 div를 선택, 그 div의 '자식'인 h1을 선택 */
+
+
+        #section h2 {background-color: skyblue;}
+        /* section이라는 아이디를 갖고있는 요소의 '후손' 중 h2를 선택
+        후손선택자는 해당 요소가 포함하고있는 모든 요소 중에 선택하는 방법. 띄어쓰기로 구분 */
+
+        /* #section .text {font-size: 10px;} */
+        #article > .text {font-size: 10px;}
+        #article > p.text {color: green;}
+        /* p태그인데 클래스가 text인 것을 선택(두 조건을 동시 만족하는 요소만 선택이 된다.)
+        선택자를 붙여서 연달아 작성 */
+
+        .bg {background-color: aqua;}
+        #header.bg {font-size: 40px;}
+        /* 아이디가 header이면서 클래스가 bg인 요소를 선택 */
+
+
+    </style>
+</head>
+<body>
+    <div id="header" class="bg">
+        <h1>웹퍼블리셔</h1>
+        <div>
+            <h1>2일차</h1>
+        </div>
+    </div>
+
+    <div id="section">
+        <h2>후손선택자와 자식선택자</h2>
+        <div id="article">
+            <h2 class="text">후손선택자와 자식선택자의 차이</h2>
+            <p class="text">안녕하세요</p>
+        </div>
+    </div>
+
+    <h2 class="text">#section 밖에 있는 h2</h2>
+</body>
+</html>

@@ -1,0 +1,22 @@
+마이박스> [넷플릭스_준비물] 내 파일 다운
+13일차/netflix/index.html
+13일차/netflix/css/style.css
+13일차/netflix/img/
+13일차/넷플릭스_준비물/넷플릭스_내용.txt
+                               /netflix_310x310.png
+
+header#header <- 헤더 고정입니다!
+div#main_visual
+nav#lnb
+시청중인 콘텐츠 : #now_play
+NEWS : #news
+로그인박스 : #login
+대세콘텐츠 : #new_cont
+footer#footer
+
+시청중인 콘텐츠 스크롤바 표시되게 도전! 안되면 2,3,5,6번째 만들어놓고 주석처리
+NEW! 요즘 대세 콘텐츠 스크롤바 표시되게 도전! 안되면 3~6번째 만들어놓고 주석처리
+
+레이아웃 다 되신 분들께서는 확인 후 내용 채워 넣어주세요~!
+.svg / .webp : 확장자가 다른 형태의 이미지 파일입니다.
+이미지 태그나 백그라운드로 입력하면 됩니다.

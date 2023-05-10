@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 오디오 태그</title>
+</head>
+<body>
+    <audio src="audio_sample.mp3" autoplay muted controls></audio>
+    <video src="video_sample.mp4" autoplay muted controls loop width="500" height="600" poster="poster_image.jpg"></video>
+    <!-- audio 및 video 태그 속성
+    autoplay: 오디오/비디오 로드 되면 바로 실행(크롬은 2018년 이후부터 자동재생 불가. 무작위 광고 등으로 인해 사용자 환경이 안좋아졌기 때문. 음소거 속성(muted) 추가시 자동재생 가능)
+    muted: 재생은 되지만 소리는 끔(음소거)
+    controls: 컨트롤러 막대 표시
+    loop: 반복재생
+    preload: 재생 버튼을 눌러 재생하기 전에 파일을 다운로드해 미리 준비해둔다(속성값에 따라 다름).
+     - auto: 페이지 로딩시 브라우저가 전체 비디오 파일도 같이 로드
+     - metadata: 페이지 로딩시 브라우저가 메타데이터만 로드
+     - none: 페이지 로딩시 브라우저가 비디오 파일 먼저 로딩 안함
+    poster(비디오 속성): 비디오가 재생 불가능할 경우 또는 플레이 전 미리 보여줄 이미지(썸네일 이미지) 지정. 항상 지정 권장
+    width/height(비디오 속성): 비디오 크기 조절. 항상 지정 권장(비디오 파일이 로드될 동안 공간 확보)
+    -->
+
+
+    <!-- 브라우저의 지원 여부에 따라 source 태그를 사용해 여러 포맷의 비디오 파일을 지정해둘 수 있다.  여러 포맷이 필요한 경우 convertio같은 사이트에서 변환하거나 인코딩 프로그램을 이용 -->
+    <video controls width="500" height="300" poster="poster_image.jpg">
+        <source src="video_sample.mp4" type="video/mp4">
+        <source src="video_sample.ogv" type="video/ogg">
+        <source src="video_sample.webm" type="video/webm">
+        이 영상을 보기 위해서는 HTML5를 지원하는 브라우저가 필요합니다.
+        <!-- video 태그를 지원하지 않는 브라우저에서 표시될 내용인 대체 텍스트(필수 입력 권장) -->
+    </video>
+
+    <iframe src="http://nate.com" frameborder="0" width="500" height="500"></iframe>
+    <object data="http://nate.com" type="text/html" width="500" height="500"></object>
+    <!-- object 태그는 iframe태그와 비슷하게 사용된다.
+    html문서, 비디오, 오디오, pdf, 플러그인 등을 넣을 수 있으나 대부분의 브라우저가 플래시, 액티브엑스 등을 더이상 지원하지 않기 때문에 사용 빈도가 낮아졌다.
+    옛~~~~날에 비디오, 오디오, 플래시 파일 등을 삽입할 때 사용했던 태그
+    <embed src="" type=""> 사용 지양(권장하지 않음) -->
+
+
+    <!-- 유튜브 영상 퍼오기
+    원하는 유튜브 영상 플레이 페이지에서 [공유] -> [퍼가기] -> 소스 복사/붙여넣기 -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/U6XAxq-8Z6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    
+
+
+
+</body>
+</html>

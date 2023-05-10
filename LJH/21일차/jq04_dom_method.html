@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 객체 조작 메서드</title>
+    <style>
+        .classTest {color: hotpink;}
+    </style>
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="theTitle">html 조작</h1>
+        <ul class="list1">
+            <li>list 1</li>
+            <li class="obj1">list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+            <li>list 5</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function(){
+
+            $(".theTitle").html("<a href='#'>요소 개체 조작</a>");
+            // .theTitle의 내부에 새 요소로 변경
+            // .html() 메서드는 자바스크립트의 innerHTML과 같다.
+
+
+            $(".theTitle").text("<a href='#'>요소 개체 조작</a>");
+            // .text() 메서드는 html 요소가 들어가도 텍스트로만 삽입한다.
+
+
+            $(".obj1").text("리스트 2");
+            // .obj1의 내용인 list 2를 새 텍스트로 변경(글자만 변경하고 싶은 경우 .text()를 사용)
+
+            // $(".list1").append("<li>list 6</li>");
+            // $(".list1").prepend("<li>list 0</li>");
+            // 부모요소.append(자식요소) : 부모요소에 자식요소를 뒷쪽(내부)에 끼워넣는다.
+            // 부모요소.prepend(자식요소) : 부모요소에 자식요소를 앞쪽(내부)에 끼워넣는다.
+
+            $("<li>list 6</li>").appendTo(".list1");
+            $("<li>list 0</li>").prependTo(".list1");
+            // 자식요소.appendTo(부모요소) : 자식요소를 부모요소의 뒷쪽(내부)에 끼워넣는다.
+            // 자식요소.prependTo(부모요소) : 자식요소를 부모요소의 앞쪽(내부)에 끼워넣는다.
+
+            $("<li>앞에 추가</li>").insertBefore( $(".list1>li").eq(4) );
+            // $("<li>앞에 추가</li>").insertBefore( $(".list1>li:nth-child(5)") );
+            // .list1의 인덱스번호 4번째 (list4) 이전에 새 요소 추가
+
+            $("<li>뒤에 추가</li>").insertAfter( $(".list1>li").eq(6) );
+            // .list1의 인덱스번호 6번째 (list5) 다음에 새 요소 추가
+
+
+            $(".obj1").clone().appendTo(".list1");
+            // .ojb1(리스트 2) 복사 후 .list1의 하위요소로 마지막에 추가
+
+
+            $(".list1>li").eq(0).remove();
+            // .list1>li의 인덱스 0번을 삭제
+
+
+            var a = $(".list1>li").eq(0).attr("class");
+            console.log(a);
+            // undefined. 첫번째 요소(list 1)의 class값을 반환(class가 없음)
+
+
+            $(".list1>li").eq(0).attr("class","obj2");
+            // 첫번째 요소(list 1)의 class값을 새 데이터로 지정(속성,속성값)
+            $(".obj2").css("background-color","yellow");
+
+            // $(".list1>li").eq(0).attr("class","obj2").css("background-color","yellow");
+
+
+
+
+            $(".list1>li").eq(2).addClass("classTest");
+            $(".list1>li").eq(2).removeClass("classTest");
+
+            // .addClass("클래스명") : 요소에 클래스 추가
+            // .removeClass("클래스명") : 요소에 클래스 제거(클래스 속성은 남음)
+
+
+
+
+        });
+    </script>
+</body>
+</html>

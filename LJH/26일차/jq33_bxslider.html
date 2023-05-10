@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bx슬라이더</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> CDN 방식 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <style>
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: red !important;
+        }
+        .bx-wrapper {width: 600px;}
+    </style>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> CDN 방식-->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+      $(function(){
+        $(".slider").bxSlider({
+            mode: 'vertical',
+            speed : 1000,
+            startSlide : 1,
+            captions: true
+        });
+      });
+    </script>
+</head>
+<body>
+    <div class="slider">
+        <div><img src="img/image_01.jpg" alt="" title="이미지 1번입니다"></div>
+        <div><img src="img/image_02.jpg" alt="" title="만든사람 고맙습니다"></div>
+        <div><img src="img/image_03.jpg" alt="" title=""></div>
+    </div>    
+
+
+
+    <div data-slider-id="uvnwxy"></div>
+    <script type="text/javascript" src="https://sliderui.com/sliders/uvnwxy.js"></script>
+</body>
+</html>

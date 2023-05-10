@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+/* 모바일버전 미디어쿼리 */
+body {background-color: #373741;}
+#wrap {width: 100%; margin: auto; font-family: 'Nanum Gothic', sans-serif;}
+
+#header {width: 100%; height: 120px; background-color: #555; text-align: center;}
+#header h1 {padding-top: 10px;}
+
+#lnb {width: 100%; height: 120px; text-align: center; background-color: #373741; font-weight: bold;}
+#lnb li {width: 100%; height: 30px; background-color: rgba(0,0,0,.2);}
+#lnb li:nth-child(2n) {background-color: rgba(0,0,0,.3);}
+#lnb a {color: #fff; line-height: 27px;}
+
+#main_visual {width: 100%; height: 250px; background: url(../img/main_sac_img.jpg) no-repeat center;}
+
+.contents {width: 94%; height: 423px; margin: 10px 3%; position: relative;}
+.contents a img {width: 100%;}
+.cont_text {width: 100%; height: 200px; background-color: rgba(0,0,0,.1); position: absolute; bottom: 0; right: 0; color: #fff; text-align: center;}
+
+#mobile_btn {width: 240px; height: 60px; margin: 50px auto;}
+#mobile_btn li {width: 60px; height: 60px; background-color: rgba(198, 231, 11, 0.651); border-radius: 50%; float: left; margin-right: 29px; position: relative;}
+#mobile_btn li:last-child {margin: 0;}
+#mobile_btn li a {color: rgba(0,0,0,1); font-size: 35px; position: absolute; top: 20%; right: 20%;}
+
+#footer {width: 100%; height: 200px; background-color: #131111; text-align: left; padding-top: 10px; font-size: 11px; color: #555;}
+#foo_logo {width: 94%; height: 60px; margin: 10px auto;}
+#copyright {width: 94%; height: 90px; margin: auto;}
+#copyright p span {font-weight: bold;}
+
+
+/* 태블릿버전 미디어쿼리 */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    #wrap {width: 100%;}
+    #lnb {height: 30px;}
+    #lnb li {width: 25%; height: 30px; float: left;}
+    #main_visual {height: 300px;}
+    .contents {width: 47%; float: left; margin: 50px 1.5%;}
+    .cont_text {height: 120px;}
+    #mobile_btn {display:none;}
+    #footer {height: 100px; clear: both; font-size: 10px;}
+    #foo_logo {width: 33%; float: left; margin: 20px 2.5%;}
+    #copyright {width: 57%; height: 60px; float: left; margin: 20px 2.5%;}
+}
+
+
+/* 데스크탑버전 미디어쿼리 */
+@media screen and (min-width: 960px) {
+    #wrap {width: 960px;}
+    #lnb {height: 30px;}
+    #lnb li {width: 240px; height: 30px; float: left;}
+    #main_visual {height: 500px;}
+    .contents {width: 225px; height: 280px; margin: 50px 20px 50px 0; float: left;}
+    #wrap .contents:nth-child(7),
+    #wrap .contents:nth-child(11) {margin-right: 0;}
+    .cont_text {height: 100px; line-height: 20px; letter-spacing: -1px;}
+    #mobile_btn {display: none;}
+    #footer {height: 100px; clear: both;}
+    #foo_logo {width: 200px; float: left; margin: 20px;}
+    #copyright {width: 700px; height: 60px; float: left; margin: 20px 20px 20px 0; font-size: 15px;}
+}

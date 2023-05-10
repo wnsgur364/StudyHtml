@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOM N TOMS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
+    <!-- roboto, 노토산스 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#572a31">
+    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="theme-color" content="#572a31">
+</head>
+<body>
+    <header id="header">
+        <div class="center_wrap">
+            <h1><a href="#"><img src="img/logo.png" alt="탐앤탐스 로고"></a></h1>
+            <div id="gnb_pc">
+                <ul>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">탐앤탐스 몰</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">CHINESE</a></li>
+                </ul>
+            </div>
+            <div id="lnb_pc">
+                <ul class="main_menu">
+                    <li><a href="#">MENU</a>
+                        <ul class="sub_menu sub_menu_01">
+                            <li><a href="#">신메뉴</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">STORE</a>
+                        <ul class="sub_menu sub_menu_03">
+                            <li><a href="#">국내 매장 찾기</a></li>
+                            <li><a href="#">글로벌 매장 찾기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SERVICE</a>
+                        <ul class="sub_menu sub_menu_04">
+                            <li><a href="#">가맹점 개설 문의</a></li>
+                            <li><a href="#">마이탐 멤버쉽</a></li>
+                            <li><a href="#">제휴할인/기프트카드</a></li>
+                            <li><a href="#">렌탈 서비스</a></li>
+                            <li><a href="#">탐스 라이프 스토어</a></li>
+                            <li><a href="#">아카데미</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul class="sub_menu sub_menu_05">
+                            <li><a href="#">예술문화활동</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">갤러리탐</a></li>
+                                    <li><a href="#">탐스테이지</a></li>
+                                    <li><a href="#">탐시어터</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객의 소리</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">제휴 마케팅/단체구매 제안</a></li>
+                                    <li><a href="#">신규 입점제의</a></li>
+                                    <li><a href="#">마이탐 멤버쉽 이용안내</a></li>
+                                    <li><a href="#">1:1 문의하기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">사회공헌활동</a></li>
+                            <li><a href="#">온라인 커뮤니티</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">인스타그램</a></li>
+                                    <li><a href="#">블로그</a></li>
+                                    <li><a href="#">유튜브</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">칭찬사연</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">칭찬사연 접수</a></li>
+                                    <li><a href="#">칭찬사연 소개</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TOM N TOMS</a>
+                        <ul class="sub_menu sub_menu_06">
+                            <li><a href="#">브랜드소개</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">TOM N TOMS</a></li>
+                                    <li><a href="#">Coffee & Pretzel</a></li>
+                                    <li><a href="#">Brand History</a></li>
+                                    <li><a href="#">Global TOM N TOMS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 모바일 내비게이션 -->
+            <div id="lnb_m_bg"></div>
+            <div id="lnb_m">
+                <div id="lnb_m_logo">
+                    <a href="#"><img src="img/nav_logo.svg" alt="탐탐 로고"></a>
+                </div>
+                <ul class="main_menu">
+                    <li><a href="#">MENU</a>
+                        <ul class="sub_menu sub_menu_01">
+                            <li><a href="#">신메뉴</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">STORE</a>
+                        <ul class="sub_menu sub_menu_03">
+                            <li><a href="#">국내 매장 찾기</a></li>
+                            <li><a href="#">글로벌 매장 찾기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SERVICE</a>
+                        <ul class="sub_menu sub_menu_04">
+                            <li><a href="#">가맹점 개설 문의</a></li>
+                            <li><a href="#">마이탐 멤버쉽</a></li>
+                            <li><a href="#">제휴할인/기프트카드</a></li>
+                            <li><a href="#">렌탈 서비스</a></li>
+                            <li><a href="#">탐스 라이프 스토어</a></li>
+                            <li><a href="#">아카데미</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul class="sub_menu sub_menu_05">
+                            <li><a href="#">예술문화활동</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">갤러리탐</a></li>
+                                    <li><a href="#">탐스테이지</a></li>
+                                    <li><a href="#">탐시어터</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객의 소리</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">제휴 마케팅/단체구매 제안</a></li>
+                                    <li><a href="#">신규 입점제의</a></li>
+                                    <li><a href="#">마이탐 멤버쉽 이용안내</a></li>
+                                    <li><a href="#">1:1 문의하기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">사회공헌활동</a></li>
+                            <li><a href="#">온라인 커뮤니티</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">인스타그램</a></li>
+                                    <li><a href="#">블로그</a></li>
+                                    <li><a href="#">유튜브</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">칭찬사연</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">칭찬사연 접수</a></li>
+                                    <li><a href="#">칭찬사연 소개</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TOM N TOMS</a>
+                        <ul class="sub_menu sub_menu_06">
+                            <li><a href="#">브랜드소개</a>
+                                <ul class="sub_menu_3depth">
+                                    <li><a href="#">TOM N TOMS</a></li>
+                                    <li><a href="#">Coffee & Pretzel</a></li>
+                                    <li><a href="#">Brand History</a></li>
+                                    <li><a href="#">Global TOM N TOMS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="lnb_lang_m">
+                    <ul>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">CHINESE</a></li>
+                    </ul>
+                </div>
+                <a id="m_close_btn" href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span class="blind">메뉴 닫기</span>
+                </a>
+            </div>
+            <div id="m_open_btn" class="m_nav_btn">
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="blind">메뉴 열기</span>
+                </a>
+            </div>
+            <div id="m_mall_btn" class="m_nav_btn">
+                <a href="#">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="blind">탐앤탐스몰</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="main_visual">
+        <div class="center_wrap">
+            <ul class="slick">
+                <li class="slider_item"><a href="#"><span class="blind">바나나 레볼루션 먹고, 슬립타이트 오브젝트 피크닉 매트 받자! 에코 드링킹자 FREE</span></a></li>
+                <li class="slider_item"><a href="#"><span class="blind">탐앤펭수 MD 출시! 2023.3.20</span></a></li>
+                <li class="slider_item"><a href="#"><span class="blind">‘Blossom Essay’ 봄 시즌 음료 3종 출시</span></a></li>
+                <li class="slider_item"><a href="#"><span class="blind">탐앤탐스 컬쳐 카페 프로젝트 52기</span></a></li>
+                <li class="slider_item"><a href="#"><span class="blind">국내산 쌀 100% 쌀떡볶이 출시</span></a></li>
+                <li class="slider_item"><a href="#"><span class="blind">대체당 알룰로스 함유, 글루텐 프리, 평균 12g 고단백 도넛</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="notice_m">
+        <div class="center_wrap">
+            <ul class="slick">
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] NFT 애그리게이터 마켓 HEYST, ‘폴리곤(MATIC)’ 체인 지원</a>
+                    <span class="notice_date">2023.04.10</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 매년 봄 찾아오는 원물 가득 ‘리얼 바나나 레볼루션’ 출시</a>
+                    <span class="notice_date">2023.04.07</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 웰니스 열풍에 맞춘 프로틴 도넛 3종 출시</a>
+                    <span class="notice_date">2023.04.04</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 펭수 콜라보 MD제품 쇼핑 라이브로 선봬</a>
+                    <span class="notice_date">2023.03.30</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] HEYST, ‘국내 최초’ 세계 1위 NFT 마켓 ‘블러(Blur)’ 연동</a>
+                    <span class="notice_date">2023.03.27</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스 성신여대점, 감성에 편리함을 더한 리뉴얼 OPEN</a>
+                    <span class="notice_date">2023.03.17</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] NFT 에그리게이터 마켓 ‘HEYST’, 솔라나(SOL) 체인 지원</a>
+                    <span class="notice_date">2023.03.15</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 2023 시즌, 서울 이랜드 FC X 탐앤탐스 함께!</a>
+                    <span class="notice_date">2023.03.09</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스, ‘Blossom Essay’ 봄 시즌 음료 3종 출시</a>
+                    <span class="notice_date">2023.03.08</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                <li class="slider_item">
+                    <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 가상자산 거래소 빗썸 ‘부리또 월렛’과 MOU 체결</a>
+                    <span class="notice_date">2023.03.02</span>
+                    <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="notice_pc">
+        <div class="center_wrap">
+            <ul class="slick">
+                <li class="slider_item">
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] NFT 애그리게이터 마켓 HEYST, ‘폴리곤(MATIC)’ 체인 지원</a>
+                        <span class="notice_date">2023.04.10</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 매년 봄 찾아오는 원물 가득 ‘리얼 바나나 레볼루션’ 출시</a>
+                        <span class="notice_date">2023.04.07</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                </li>
+                <li class="slider_item">
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 웰니스 열풍에 맞춘 프로틴 도넛 3종 출시</a>
+                        <span class="notice_date">2023.04.04</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 펭수 콜라보 MD제품 쇼핑 라이브로 선봬</a>
+                        <span class="notice_date">2023.03.30</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                </li>
+                <li class="slider_item">
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] HEYST, ‘국내 최초’ 세계 1위 NFT 마켓 ‘블러(Blur)’ 연동</a>
+                        <span class="notice_date">2023.03.27</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스 성신여대점, 감성에 편리함을 더한 리뉴얼 OPEN</a>
+                        <span class="notice_date">2023.03.17</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                </li>
+                <li class="slider_item">
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] NFT 에그리게이터 마켓 ‘HEYST’, 솔라나(SOL) 체인 지원</a>
+                        <span class="notice_date">2023.03.15</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 2023 시즌, 서울 이랜드 FC X 탐앤탐스 함께!</a>
+                        <span class="notice_date">2023.03.09</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                </li>
+                <li class="slider_item">
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스, ‘Blossom Essay’ 봄 시즌 음료 3종 출시</a>
+                        <span class="notice_date">2023.03.08</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                    <div class="notice_item">
+                        <a class="notice_tit" href="#">[보도자료] 탐앤탐스, 가상자산 거래소 빗썸 ‘부리또 월렛’과 MOU 체결</a>
+                        <span class="notice_date">2023.03.02</span>
+                        <a class="notice_plus_btn" href="#"><img src="img/plus_i.png" alt="더보기"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section id="toms_menu">
+        <div class="center_wrap">
+            <h2><span class="tit_bold">TOM N TOMS</span> MENU</h2>
+            <div class="slide_container">
+                <!-- 슬라이드 이전/다음 버튼 -->
+                <div class="slide_btn">
+                    <div class="slide_btn_prev">
+                        <a href="#">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span class="blind">이전</span>
+                        </a>
+                    </div>
+                    <div class="slide_btn_next">
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span class="blind">다음</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="fraction">1 / 5</div>
+                <ul id="toms_menu_slide" class="slick">
+                    <li class="slider_item">
+                        <figure class="toms_menu_slide_img">
+                            <a href="#"><img src="img/menu_01.jpg" alt="Blossom Essay"></a>
+                            <figcaption class="toms_menu_slide_caption">Blossom Essay</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="toms_menu_slide_img">
+                            <a href="#"><img src="img/menu_02.jpg" alt="꼰대라떼 스테비아"></a>
+                            <figcaption class="toms_menu_slide_caption">꼰대라떼 스테비아</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="toms_menu_slide_img">
+                            <a href="#"><img src="img/menu_03.jpg" alt="Variety, TOM'S CAKE"></a>
+                            <figcaption class="toms_menu_slide_caption">Variety, TOM'S CAKE</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="toms_menu_slide_img">
+                            <a href="#"><img src="img/menu_04.jpg" alt="Variety Cookies"></a>
+                            <figcaption class="toms_menu_slide_caption">Variety Cookies</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="toms_menu_slide_img">
+                            <a href="#"><img src="img/menu_05.jpg" alt="Varie-Tea, TOM'S TEA"></a>
+                            <figcaption class="toms_menu_slide_caption">Varie-Tea, TOM'S TEA</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="play_btn">
+                    <button class="play">
+                        <i class="fa-solid fa-play"></i>
+                        <span class="blind">재생</span>
+                    </button>
+                    <button class="pause">
+                        <i class="fa-solid fa-pause"></i>
+                        <span class="blind">일시정지</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="toms_about">
+        <div class="center_wrap">
+            <div id="toms_about_box">
+                <h3>대한민국 대표 스페셜티 커피 브랜드</h3>
+                <h2>TOM N TOMS</h2>
+                <p>탐앤탐스는 오랜 노하우로 국내외 커피 시장을 선도하며
+                    스페셜티 커피와 갓 구운 따뜻한 프레즐, 문화가 융합된 특별한 공간으로
+                    지금 대한민국을 비롯해 전 세계에서 사랑받는 브랜드입니다.</p>
+                <div id="toms_about_btn">
+                    <a href="#">가맹문의</a>
+                    <a href="#">브랜드 소개</a>
+                    <a href="#">신규매장 소개</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="toms_md">
+        <div class="center_wrap">
+            <h2><span class="tit_bold">TOM N TOMS</span> MD's PICK</h2>
+            <div class="slide_container">
+                <!-- 슬라이드 이전/다음 버튼 -->
+                <div class="slide_btn">
+                    <div class="slide_btn_prev">
+                        <a href="#">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span class="blind">이전</span>
+                        </a>
+                    </div>
+                    <div class="slide_btn_next">
+                        <a href="#">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span class="blind">다음</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="fraction">1 / 5</div>
+                <ul id="mdp_slide" class="slick">
+                    <li class="slider_item">
+                        <figure class="mdp_slide_img">
+                            <a href="#"><img src="img/mdpick_01.jpg" alt="꼰대라떼 & 화이트 머그 세트"></a>
+                            <figcaption class="mdp_slide_caption">꼰대라떼 & 화이트 머그 세트</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="mdp_slide_img">
+                            <a href="#"><img src="img/mdpick_02.jpg" alt="시그니처 드립커피 세트"></a>
+                            <figcaption class="mdp_slide_caption">시그니처 드립커피 세트</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="mdp_slide_img">
+                            <a href="#"><img src="img/mdpick_03.jpg" alt="드립커피 & 티 세트"></a>
+                            <figcaption class="mdp_slide_caption">드립커피 & 티 세트</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="mdp_slide_img">
+                            <a href="#"><img src="img/mdpick_04.jpg" alt="페니하우스 & 밀크 머그 세트"></a>
+                            <figcaption class="mdp_slide_caption">페니하우스 & 밀크 머그 세트</figcaption>
+                        </figure>
+                    </li>
+                    <li class="slider_item">
+                        <figure class="mdp_slide_img">
+                            <a href="#"><img src="img/mdpick_05.jpg" alt="액상커피 마일드 블렌드 세트"></a>
+                            <figcaption class="mdp_slide_caption">액상커피 마일드 블렌드 세트</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="play_btn">
+                    <button class="play">
+                        <i class="fa-solid fa-play"></i>
+                        <span class="blind">재생</span>
+                    </button>
+                    <button class="pause">
+                        <i class="fa-solid fa-pause"></i>
+                        <span class="blind">일시정지</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="toms_sns">
+        <div class="center_wrap">
+            <h2>#<span class="tit_bold">TOM N TOMS</span> SNS</h2>
+            <ul>
+                <li><a href="#"><img src="img/insta_01.jpg" alt="인스타1"></a></li>
+                <li><a href="#"><img src="img/insta_02.jpg" alt="인스타2"></a></li>
+                <li><a href="#"><img src="img/insta_03.jpg" alt="인스타3"></a></li>
+                <li><a href="#"><img src="img/insta_04.png" alt="인스타4"></a></li>
+                <li><a href="#"><img src="img/insta_05.jpg" alt="인스타5"></a></li>
+                <li><a href="#"><img src="img/insta_06.jpg" alt="인스타6"></a></li>
+                <li><a href="#"><img src="img/insta_07.jpg" alt="인스타7"></a></li>
+                <li><a href="#"><img src="img/insta_08.jpg" alt="인스타8"></a></li>
+                <li><a href="#"><img src="img/insta_09.jpg" alt="인스타9"></a></li>
+                <li><a href="#"><img src="img/insta_10.jpg" alt="인스타10"></a></li>
+            </ul>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="center_wrap">
+            <div id="sns">
+                <h4>Follow us</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span class="blind">인스타그램</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span class="blind">페이스북</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span class="blind">유튜브</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns_blog.png" alt="네이버 블로그">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="lang">
+                <h4>Language</h4>
+                <ul>
+                    <li><a href="#">KOREAN</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">CHINESE</a></li>
+                </ul>
+            </div>
+            <div id="cs">
+                <h4>고객만족센터</h4>
+                <p><a href="tel:02-3412-0781">02. 3412. 0781</a></p>
+            </div>
+            <div id="fnb">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">프랜차이즈</a></li>
+                    <li><a href="#">계열사소개</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">고객만족센터</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                    <li><a href="#">가맹점 전용 게시판</a></li>
+                </ul>
+            </div>
+            <div id="company">
+                <span>서울특별시 광진구 아차산로 426</span>
+                <span>대표 : 명선철</span><br>
+                <span>사업자등록번호 : 215-86-65050</span>
+                <span>개인정보 책임자 : 이동규</span>
+                <span>TEL. 02-3412-0781</span>
+                <span>FAX. 02-546-1907</span>
+                <p>COPYRIGHT ⓒ 2022 TOM N TOMS COFFEE. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="chatbot" class="bottom_fix_btn">
+        <img src="img/chatbot.png" alt="챗봇">
+    </a>
+    <a href="#" id="gotop" class="bottom_fix_btn">
+        <i class="fa-solid fa-angle-up"></i>
+        <span class="blind">맨위로</span>
+    </a>
+
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

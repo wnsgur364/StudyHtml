@@ -1,0 +1,9 @@
+공유폴더>작업물 업로드 폴더>탐탐메인
+http://naver.me/GwEMJqUA
+
+각자 이름 폴더 > [1차]
+                          └ [img]
+                               └ 이미지파일들
+                          └ [css]
+                               └ style.css
+                          └ index.html

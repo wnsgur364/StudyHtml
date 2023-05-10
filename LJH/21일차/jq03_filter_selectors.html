@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 필터 선택자(탐색 선택자)</title>
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>다람쥐</li>
+        <li>토끼</li>
+        <h2>귀여운애들</h2>
+        <li>호랑이</li>
+        <li>늑대</li>
+        <li>
+            <span>표범</span>
+        </li>
+        <li class="snake">뱀</li>
+        <h2><a href="#">무서운애들</a></h2>
+    </ul>
+    <hr>
+    <ul>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>다람쥐</li>
+        <li>토끼</li>
+        <h2>귀여운애들</h2>
+        <li>호랑이</li>
+    </ul>
+    <hr>
+    <ol>
+        <h1>귀여운애들</h1>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>다람쥐</li>
+        <h1>무서운애들</h1>
+        <li>호랑이</li>
+        <li>늑대</li>
+        <li>표범</li>
+        <h1>물에사는애들</h1>
+        <li>광어</li>
+        <li>연어</li>
+        <h2>수고하셨어요</h2>
+    </ol>
+
+    <script>
+
+        $(function(){
+
+            $("ul>li:first").css("color","red");
+            // $("ul>li").first().css("color","red"); 동일
+            // ul>li 중 맨 첫번째 요소만 선택
+
+            $("ul>li:first-child").css("background-color","skyblue");
+            // :first, :last 는 전체 요소 중 첫번째 요소만 선택(한 개)
+            // :first-child, :last-child는 같은 구조가 있다면 그 구조의 첫번째 요소들을 선택(여러개가 선택될 수도 있음.)
+
+            $("ol>li:even").css("color","magenta");
+            // $("ol>li:nth-of-type(even)").css("color","magenta");
+            // :nth-of-type(even)와는 반대로 선택됨.
+            // 인덱스번호(0번)로 선택되기 때문.
+
+
+            $("ol>li:eq(0)").css("color","blue");
+            // $("ol>li").eq(0).css("color","blue");
+            // 선택 요소 중 인덱스번호로 0번째 요소 선택
+
+
+            $("ol>li:lt(4)").css("background-color","yellow");
+            // 선택 요소 중 인덱스번호보다 작은 요소들을 선택
+            // 인덱스 4번 = 5.늑대
+
+
+            $("ul>li:contains('다람쥐')").css("color", "aqua");
+            // 요소 중 '다람쥐'라는 텍스트를 포함하고있는 요소를 선택
+
+            $("ul>li:has('span')").css("color", "pink");
+            // 요소 중 span태그를 포함하고있는 요소를 선택
+
+            $("ul>li").filter(".snake").css("color", "tomato");
+            // 요소 중 class값이 snake인 요소를 선택
+
+            $("ul>h2").find("a").css("background-color", "red");
+            // h2요소의 하위 요소인 a태그를 선택
+            // has, filter와 주체가 다름!!
+
+
+
+            // 제이쿼리 .css() 방법 총정리
+
+            // 1. 각각 속성을 따로 지정
+            $("ul>li:eq(1)").css("font-size","24px");
+            $("ul>li:eq(1)").css("color","green");
+            $("ul>li:eq(1)").css("background-color","beige");
+
+            // 2. 메서드 체이닝 기법
+            $("ul>li:eq(3)").css("font-size","24px")
+                            .css("color","green")
+                            .css("background-color","beige");
+
+            // 3. 대상이 같다면 중괄호로 묶어 콜론(:) 기호 사용, 한꺼번에 지정(각 속성의 구분은 콤마로 구분)
+            $("ul>li:eq(5)").css({
+                "font-size":"24px",
+                "color":"green",
+                "background-color":"beige"
+            })
+
+            // 4. 중괄호 안에서 속성명에 따옴표를 없애고 작성(하이픈 없이 카멜표기법 작성)
+            $("ul>li:eq(4)").css({
+                fontSize:"24px",
+                color:"green",
+                backgroundColor:"beige"
+            })
+
+
+
+            
+
+        });
+
+    </script>
+</body>
+</html>

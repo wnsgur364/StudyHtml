@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+a {text-decoration: none;}
+ul {list-style: none;}
+
+header {height: 200px; background-color: aquamarine;}
+
+.scroll {height: 1200px;}
+.section_01 {background-color: chartreuse;}
+.section_02 {background-color: gold;}
+.section_03 {background-color: lightsalmon;}
+
+.floating_menu {width: 120px; position: fixed; right: 50px; top: 50%; transform: translateY(-50%);}
+.floating_menu a {width: 120px; height: 40px; display: block; border: 1px solid #333; box-sizing: border-box; text-align: center; padding-top: 8px; background-color: #999; color: #fff; font-weight: bold;}
+
+.floating_menu a.menu_04 {background-color: darkslateblue;}
+.floating_menu li.on a {background-color: darkorange;}
+
+footer {height: 200px; background-color: saddlebrown;}
+

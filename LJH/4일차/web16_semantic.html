@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱(semantic) 태그</title>
+    <style>
+        /* CSS 초기화 : 과정 내 레이아웃 작업시 세트로 입력! */
+        * {margin: 0; padding: 0; border: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+
+        #wrap {width: 960px; height: 1000px; background-color: rgba(0,0,0,.1); margin: auto;}
+        #header {width: 960px; height: 200px; background-color: rgba(255,0,0,.1);}
+        #logo {width: 300px; height: 200px; background-color: rgba(0,0,0,.1); margin: auto; text-align: center; line-height: 200px;}
+        #navigation {width: 960px; height: 50px; background-color: rgba(0,255,0,.1);}
+        #navigation ul li {width: 240px; height: 50px; background-color: rgba(0,0,0,.1); float: left; }
+        #navigation ul li a {width: 240px; height: 50px; background-color: aqua; text-align: center; display: block; line-height: 50px;}
+        /* 앵커태그는 inline속성을 가지고 있기 때문에 사이즈가 입력되지 않는다. 앵커태그에 사이즈를 주려면 display속성을 block속성(또는 inline-block)으로 변경해주면 된다. */
+        #navigation ul li a:hover {background-color: black; color: #fff; text-decoration: underline;}
+        #main_visual {width: 960px; height: 400px; background-color: rgba(0,0,255,.1);}
+        #main_contents {width: 960px; height: 300px; background-color: rgba(255,255,0,.1);}
+        .main_banner {width: 480px; height: 300px; background-color: rgba(0,0,0,.1); float: left;}
+        #footer {width: 960px; height: 50px; background-color: rgba(255,0,255,.1);}
+
+    </style>
+</head>
+<body>
+    <!-- <div id="wrap">
+        <div id="header">
+            <h1 id="logo">
+                <a href="#">logo</a>
+            </h1>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+            </ul>
+        </div>
+        <div id="main_visual">
+            메인 비주얼 영역(메인 배너, 메인 슬라이드 영역, 프로모션 영역)
+        </div>
+        <div id="main_contents">
+            <div class="main_banner">배너1</div>
+            <div class="main_banner">배너2</div>
+        </div>
+        <div id="footer">
+            하단 영역(푸터). 웹사이트의 정보, 회사 정보..<br>
+            Copyright 2023. KME All Rights reserved.
+        </div>
+    </div> -->
+
+
+    <!-- 시맨틱태그(Semantic : 의미론적인)
+    div에 의미가 담겨있는 태그. HTML5에서 대량 추가가 되었음.
+    역할에 따라 큰 레이아웃을 나눌 때 주로 사용함. div와 섞어서 사용하며, 모든 태그를 다 시맨틱태그로 변경해야 하는 것은 아님. 그러나 웹표준 및 웹접근성을 위해 시맨틱태그를 사용해주는게 더 좋다.
+    main태그는 하위버전 브라우저(특히 IE) 지원여부 꼭 확인 후 사용할 것!
+    웹디기능사 시험에서는 시맨틱태그 쓰지 말 것! -->
+
+    <div id="wrap">
+        <header id="header">
+            <h1 id="logo">
+                <a href="#">logo</a>
+            </h1>
+        </header>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+            </ul>
+        </nav>
+        <main id="main_visual">
+            메인 비주얼 영역(메인 배너, 메인 슬라이드 영역, 프로모션 영역)
+        </main>
+        <section id="main_contents">
+            <figure class="main_banner">배너1</figure>
+            <figure class="main_banner">배너2</figure>
+        </section>
+        <footer id="footer">
+            하단 영역(푸터). 웹사이트의 정보, 회사 정보..<br>
+            Copyright 2023. KME All Rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초</title>
+    <script>
+        // 자바스크립트 한줄짜리 주석
+        /* 자바스크립트 입력 위치
+
+        head 안에 삽입(원칙) : head에서 실행되어도 상관없으면(DOM엘리먼트 선택 안해도 되면) 그냥 head에 작성
+
+        DOM엘리먼트 선택시 선택할 대상이 없으면(페이지의 요소가 다 준비되지 않은 상태)
+        코드를 읽은 후 끝나버리기 대문에 실행이 안되서 오류가 발생한다.
+
+        해결방법
+        1. <head>안에 넣되, 실행 지연 코드 입력
+            window.onload = function() {
+                자바스크립트 코드 입력
+            }
+            웹페이지의 모든 구성요소에 대한 로드가 끝나면 스크립트를 실행해라.
+        2. <body> 안에 넣는다. </body> 닫기 전에 삽입        
+        */
+    </script>
+</head>
+<body>
+    <input type="button" onclick="window.alert('버튼을 클릭하셨군요?')" value="클릭!">
+    <!-- inline방식은 태그에 직접 자바스크립트를 기술하는 방식이다.
+    태구에 연관된 스크립트가 분명하게 드러나지만 정보와 제어가 섞여있기 때문에 정보로서의 가치가 떨어지고, 되도록 사용을 지양하는 것이 좋다.(유지 보수 어려움) -->
+
+    <script>
+
+        // window.alert("안녕하세요");
+        // alert("안녕하세요2");   // window 객체는 생략 가능
+        // document.write("안뇽");
+        // document.write(""안녕하세요" 라고 말했다.");     // 따옴표 중복되면 안됨!!!
+        // document.write('"안녕하세요" 라고 말했다.');
+        // document.write("\"안녕하세요\" 라고 말했다.");
+        // document.write("나는 '뭐먹을까' 라고 생각했다.");
+        // document.write('나는 \'뭐먹을까\' 라고 생각했다.');
+
+        var age = prompt("당신의 나이는?","3");
+        // window.prompt("질문","기본값");
+        // 사용자에게 질문 창을 띄워 값을 입력받는다. 기본값을 설정해놓을 수 있다.(기본값 생략가능)
+
+        if(age >= 20) {
+            document.write("당신은 성인입니다.");
+        } else {
+            document.write("당신은 미성년자입니다.");
+        }
+
+
+    </script>
+    <script src="test.js"></script>     <!-- 파일 연결시 태그 내부에 스크립트 작성하면 안됨!(실행안됨) -->
+</body>
+</html>

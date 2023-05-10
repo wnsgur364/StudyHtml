@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 트랜지션(부드러운 전환효과)</title>
+    <style>
+        .container01 {width: 500px; height: 100px; background: lightgray;}
+        .box01 {width: 100px; height: 100px; text-align: center; float: left; line-height: 100px;}
+        .box01:hover {background: lime;}
+        .duration_05 {background: hotpink; transition-duration: .5s;}
+        .duration_2 {background: orange; transition-duration: 2s;}
+        /* 트랜지션은 :hover에 거는게 아니고 기본 요소에 걸어야 함! */
+
+
+
+        .property {width: 400px; height: 150px; background: skyblue; text-align: center; line-height: 150px; font-weight: bold; font-size: 30px; 
+            transition-duration: 4s;
+            transition-property: background-color;
+        }
+        .property:hover {background-color: orange; color: red; border-radius: 30px;}
+
+
+
+        .container02 {width: 500px; height: 100px; background: lightgray;}
+        .box02 {width: 100px; height: 100px; text-align: center; float: left; line-height: 100px; transition-duration: 2s;}
+        .box02:hover {background: lime;}
+        .delay_05 {background: plum; transition-delay: .5s;}
+        .delay_2 {background: tomato; transition-delay: 2s;}
+
+
+
+        .box03 {width: 100px; height: 100px; text-align: center; line-height: 100px; transition-duration: 4s;}
+        .box03:hover {width: 500px;}
+        .ease {background: hotpink; transition-timing-function: ease;}
+        .ease-in {background: orange; transition-timing-function: ease-in;}
+        .ease-out {background: yellow; transition-timing-function: ease-out;}
+        .ease-in-out {background: lime; transition-timing-function: ease-in-out;}
+        .linear {background: skyblue; transition-timing-function: linear;}
+        .cubic-bezier {background: tomato;
+            transition-timing-function: cubic-bezier(.17, .67, .09, 1.38);}
+
+
+
+        .transition {width: 400px; height: 150px; background: skyblue; text-align: center; line-height: 150px; font-weight: bold; font-size: 30px; /*transition: all 2s ease-out 2s;*/ transition: .5s;}
+        .transition:hover {background-color: orange; color: red; border-radius: 30px;}
+    </style>
+</head>
+<body>
+    <h1>CSS 트랜지션</h1>
+
+    <h2>transition-duration</h2>
+    <h3>애니메이션이 진행되는 시간</h3>
+    <p>시간 단위는 초(seconds=s) 또는 밀리초(milliseconds=ms=1/1000초)<br>
+    1초 아래의 숫자는 0을 생략하고 입력 가능</p>
+    <div class="container01">
+        <div class="box01 duration_05">0.5초</div>
+        <div class="box01 duration_2">2초</div>
+    </div>
+
+    <h2>transition-property</h2>
+    <h3>원하는 트랜지션 효과를 따로따로 줄 수 있다.</h3>
+    <p>transition-property: all; (기본값) 요소의 모든 속성에 트랜지션 설정<br>
+        transition-property: color; 요소의 글자색에만 트랜지션 설정<br>
+        transition-property: color, border-color; 요소의 글자색, 테두리색에만 트랜지션 설정<br>
+        transition-property: none; 트랜지션 효과 설정 안함<br>
+        ※ 기본적으로 transition-duration속성이 지정되어있어야 설정 가능</p>
+    <div class="property">마우스를 올려주세요</div>
+
+    <h2>transition-delay</h2>
+    <h3>트랜지션 지연 시간 설정(이벤트 발생 후 기다리는 시간)</h3>
+    <div class="container02">
+        <div class="box02 delay_05">0.5초</div>
+        <div class="box02 delay_2">2초</div>
+    </div>
+
+    <h2>transition-timing-function</h2>
+    <h3>트랜지션이 진행되는 속도(변화가 일어나는 속도)를 조절(가속도)</h3>
+    <p>ease: 극초반은 느리게, 초반은 빠르게, 종료지점은 느리게(기본값)<br>
+    ease-in: 시작지점의 변화가 천천히 진행<br>
+    ease-out: 종료지점의 변화가 천천히 진행<br>
+    ease-in-out: 시작지점과 종료지점의 변화가 천천히 진행<br>
+    linear: 시작부터 종료까지 동일한 속도로 진행<br>
+    cubic-bezier: 처음과 끝의 속도를 0과 1 사이의 수치를 이용해 함수값을 직접 지정(http://cubic-bezier.com)</p>
+    <div class="box03 ease">ease</div>
+    <div class="box03 ease-in">ease-in</div>
+    <div class="box03 ease-out">ease-out</div>
+    <div class="box03 ease-in-out">ease-in-out</div>
+    <div class="box03 linear">linear</div>
+    <div class="box03 cubic-bezier">cubic-bezier</div>
+
+    <h2>transition속성 한꺼번에 쓰기</h2>
+    <h3>transition: property duration timing-funciton delay; (순서)</h3>
+    <p>기본값: all 0 ease 0;(생략가능. 생략하면 기본값 적용)</p>
+    <div class="transition">마우스를 올려주세요</div>
+</body>
+</html>

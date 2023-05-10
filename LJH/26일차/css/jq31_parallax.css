@@ -1,0 +1,4 @@
+* {margin: 0; padding: 0; border: 0;}
+
+#bg {width: 100%; height: 2000px; background: url("../img/image_06.jpg"); position: relative;}
+#bg div {position: absolute; top: 400px; left: 50%; transform: translateX(-50%);}

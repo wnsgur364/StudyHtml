@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 이벤트</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul {list-style: none;}
+        h2 {margin-top: 30px;}
+        button {padding: 10px;}
+        a {color: hotpink;}
+        #textZone {width: 500px;}
+        #listWrap {width: 200px; padding: 10px; background: #ccc;}
+        /* .list1 {display: none;} */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>이벤트 연습</h1>
+        <p id="textZone">웹브라우저에서 버튼을 클릭하거나 마우스를 움직이거나 하는 사용자가 하는 모든 행위를 '이벤트가 발생했다'고 한다. 그리고 이벤트 발생시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을 '이벤트 핸들러를 설치한다'고 한다.</p>
+
+        <h2>click 이벤트 메서드</h2>
+        <p><button id="btn1">click</button></p>
+
+        <h2>mouseover 이벤트 메서드</h2>
+        <p><button id="btn2">mouseover</button></p>
+
+        <h2>on 메서드</h2>
+        <p><button id="btn3">on</button></p>
+
+        <h2>mouseleave 이벤트 메서드</h2>
+        <div id="listWrap">
+            <h3>관련 사이트</h3>
+            <ul class="list1">
+                <li><a href="#">list1</a></li>
+                <li><a href="#">list2</a></li>
+                <li><a href="#">list3</a></li>
+                <li><a href="#">list4</a></li>
+            </ul>
+        </div>
+
+        <h2>hover 이벤트 메서드</h2>
+        <h3><a href="#" class="hover">hover</a></h3>
+    </div>
+
+    <script>
+        $(function(){
+
+            $("#btn1").click(function(){
+                $("#textZone").css("color","blue");
+            });
+            // .click(실행문) : 요소를 클릭했을 때 실행문을 실행
+
+            $("#btn2").mouseover(function(){
+                $("#textZone").css("background-color","yellow");
+            });
+            // .mouseover(실행문) : 요소에 마우스를 올렸을 때
+
+            $("#btn3").on("mouseover focus",function(){
+                $("#textZone").css({
+                    color: "green",
+                    fontWeight: "bold"
+                });
+            });
+            // .on("이벤트",실행문)
+            // 이벤트 그룹 등록. 여러개의 이벤트를 한 요소에 걸 수 있다.
+
+            $(".list1").hide();
+
+            // $("#listWrap").mouseover(function(){
+            //     $(".list1").css("display","block");
+            // });
+            // $("#listWrap").mouseleave(function(){
+            //     $(".list1").css("display","none");
+            // });
+
+            // .mouseover(); 마우스를 올렸을때
+            // .mouseleave(); 마우스를 내렸을때
+
+            // $("#listWrap").hover(function(){
+            //     $(".list1").css("display","block");
+            // }, function(){
+            //     $(".list1").css("display","none");
+            // });
+
+            $("#listWrap").hover(function(){
+                $(".list1").toggle();
+                // .toggle() : .show() + .hide()
+                // 해당 상태에 따라 반대 상태로 가리거나 보여줌
+            });
+
+
+
+
+
+            // $(".hover").hover(function(){},function(){});
+            // .hover(마우스를 올렸을때,마우스를 내렸을때);
+            $(".hover").hover(
+                function(){
+                    $(this).css("color","blue");
+                },
+                
+                function(){
+                    $(this).css("color","red");
+                }
+            );
+            // this : 이벤트를 실행한 대상을 지칭
+
+
+            $("body").keyup(function(){
+                alert("hello");
+            });
+            // .keyup() : 키보드를 눌렀다가 떼었을때 실행
+            // .keydown() : 키보드를 눌렀을 때 실행
+
+
+        });
+    </script>
+</body>
+</html>

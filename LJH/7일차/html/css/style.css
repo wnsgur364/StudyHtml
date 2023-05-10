@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+/* CSS 초기화 */
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Nanum Gothic', sans-serif;}
+/*
+p 기본 사이즈 : 16px
+h1 기본 사이즈 : 2em(p 기준 2배) = 32px
+h2 기본 사이즈 : 1.5em(p 기준 1.5배) = 24px
+※ em은 배수단위
+*/
+
+
+/* 헤더 영역 */
+#header {width: 100%; height: 30px; background-color: #564D4C; font-family: 'Noto Sans KR', sans-serif;}
+#header_wrap {width: 1000px; height: 30px; margin: auto; text-align: right;}
+#gnb ul li {display: inline-block; font-size: 11px;}
+#gnb ul li:first-child {border-right: 1px solid #312a29; padding-right: 10px; margin-right: 6px;}
+#gnb ul li a {color: #ada1a0;}
+
+
+
+/* 내비게이션 영역 */
+#nav {width: 100%; height: 80px; font-family: 'Noto Sans KR', sans-serif; border-bottom: 1px solid #ccc; box-sizing: border-box;}
+#nav_wrap {width: 1000px; height: 79px; margin: auto;}
+#top_logo {width: 141px; height: 79px; float: left; padding-top: 20px; box-sizing: border-box;}
+#lnb {width: 750px; height: 79px; float: right; text-align: right; padding-top: 35px;}
+#lnb ul li {display: inline;}
+#lnb ul li a {color: #555; font-weight: 700; margin-right: 55px; letter-spacing: -2px;}
+
+
+/* 메인 콘텐츠 영역 */
+#main_cont {width: 100%; height: 876px; background: url("../img/bgimg.png");}
+#main_cont_wrap {width: 1000px; height: 876px; margin: auto; padding-top: 40px; box-sizing: border-box; position: relative;}
+#main_banner_01 {width: 594px; height: 594px; float: left; margin-right: 15px;}
+#main_banner_02 {width: 391px; height: 188px; float: left; margin-bottom: 15px;}
+#main_banner_03 {width: 391px; height: 188px; float: left; margin-bottom: 15px;}
+#main_banner_04 {width: 391px; height: 188px; float: left; margin-bottom: 15px;}
+#main_banner_05 {width: 391px; height: 188px; float: left; margin-right: 15px;}
+#main_banner_06 {width: 188px; height: 188px; float: left; margin-right: 15px;}
+#main_banner_07 {width: 188px; height: 188px; float: left; margin-right: 15px;}
+#main_banner_08 {width: 188px; height: 188px; float: left;}
+.shadow {box-shadow: 7px 7px 10px rgba(0,0,0,.2)}
+
+
+/* 퀵메뉴 */
+#quick {width: 116px; height: 584px; background-color: rgba(0,0,0,.5);
+    /* position: absolute; left: 1023px; */
+    /* 부모요소 옆에 달아줄 경우 부모 안에 요소를 만들고 부모에 relative 주고 부모를 기준으로 위치를 잡아준다. */
+    position: fixed; top: 150px; left: 50%; margin-left: 523px;
+    /* 부모와의 관계는 상관없이 화면의 보이는 영역(뷰포트)을 기준으로 잡기 때문에 태그의 삽입 위치는 아무데나 상관 없음. 항상 가운데를 기준으로 잡기 위해 50%를 준 다음 위치를 조정한다. */
+}
+
+
+/* 푸터 영역 */
+#footer {width: 100%; height: 147px; border-top: 1px solid #ccc;}
+#footer_wrap {width: 1000px; height: 147px; margin: auto;}
+#footer_logo {width: 200px; height: 147px; float: left;
+
+    /* 로고 배경으로 적용 시 */
+    /* background-image: url("../img/footer_logo.jpg");
+    background-repeat: no-repeat;
+    background-position: right 35px; */
+    background: url("../img/footer_logo.jpg") no-repeat right 35px;
+
+    /* 로고 이미지태그로 적용 시 */
+    text-align: right; padding-top: 35px; box-sizing: border-box;
+}
+#copyright {width: 750px; height: 147px; float: right; padding-top: 35px; box-sizing: border-box; font-size: 12px; color: #777;}
+#fnb a {color: #555;}
+#fnb a:nth-child(3),
+#fnb a:nth-child(4) {font-weight: bold;}
+#fnb a::after {content: "|"; margin: 0 5px 0 10px; color: #ccc;}
+/* 
+::after / ::before
+요소의 앞/뒤의 가상의 공간을 선택하는 선택자.
+이 선택자에는 content 속성을 사용할 수 있다.
+content속성의 속성값에는 문자(ex: "a")나 이미지 등 여러가지 요소를 추가할 수 있다.
+상단에 위치한 요소의 float을 해제할 때 하단의 요소에 clear: both;를 해주면 되지만
+그 중간에 다른 요소가 끼면 매번 속성을 추가해줘야 하기 때문에
+묶어주는 부모박스의 뒤에 가상의 클리어 박스를 만들어준다.
+부모박스::after {content: ""; display: block; clear: both;}
+*/
+#fnb a:last-child::after {content: ""; /* font-size: 0; */}
+#company {margin: 10px 0 20px; line-height: 1.5;}
+#company span {margin-right: 20px; letter-spacing: -1px;}
+/*
+letter-spacing 자간
+font-stretch 장평
+
+벤더프리픽스 : 새로운 기능 추가시 5대 브라우저에서 지원할 수 있도록 앞에 접두사를 붙여준다.
+prefix free 사용시 벤더프리픽스를 안붙여도 됨
+*/
+#copy {font-size: 10px; color: #a3a3a3;}

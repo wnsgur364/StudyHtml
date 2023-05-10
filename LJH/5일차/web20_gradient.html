@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 그라디언트</title>
+    <style>
+        #box01 {width: 300px; height: 150px;
+            background-image: linear-gradient(to left, tomato, purple);
+            /* background-image: linear-gradient(방향 또는 각도, 색상1, 색상2) */
+        }
+
+        #box02 {width: 300px; height: 150px;
+            background-image: linear-gradient(to bottom, rgba(255,150,30,.5), rgba(80,60,160,.8));
+        }
+        /* 색상블록(=색상정지점=color stop)에는 rgb, rgba, hsl, hsla, 컬러명, 헥사코드 모든 컬러단위가 들어갈 수 있다. 투명도도 표현 가능. 이때, 콤마와 괄호 짝 잘 맞춰서 작성할 것! */
+
+        #box03 {width: 150px; height: 150px;
+            background: linear-gradient(to right top, red, blue, green, yellow);
+        }
+        /* 방향을 모서리쪽으로 보내려면 두 개의 방향 키워드를 띄어쓰기로 함께 적어주면 된다. 순서 상관 X
+        2개 이상 ~~~~~~ 컬러를 넣을 수 있다. */
+
+        #box04 {width: 300px; height: 300px;
+            background: linear-gradient(30deg, #0f0, #f00, #00f);
+        }
+        #box05 {width: 300px; height: 300px;
+            background: linear-gradient(30deg, #0f0 0%, #f00 30%, #00f 80%);
+        }
+        /* 색상블록 안에 색상의 위치를 퍼센트로 지정할 수 있다.
+        0%(시작지점 색상) ~ 100%(종료지점 색상)
+        퍼센트 미 지정 시 자동으로 같은 비율로 나눠서 색상 분배
+        */
+        #box06 {width: 300px; height: 150px;
+            background: radial-gradient(red, green, blue);
+        }
+        /* 방사형 그라디언트, 가운데부터 시작해 사방으로 퍼져나간다. */
+    </style>
+</head>
+<body>
+    <div id="box01"></div>
+    <div id="box02"></div>
+    <div id="box03"></div>
+    <div id="box04"></div>
+    <div id="box05"></div>
+    <div id="box06"></div>
+</body>
+</html>

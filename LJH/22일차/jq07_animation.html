@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 애니메이션</title>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">500px 이동</span>
+
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">50px씩 이동</span>
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(function(){
+
+            // .animte()메서드
+            // $("선택자").animate({스타일속성}, 적용시간, 가속도, 콜백함수);
+            // 스타일 속성 : 애니메이션으로 적용할 스타일 속성
+            // http://w3schools.com 에서 animate() 검색 후 스타일 참고!
+
+            $(".btn1").click(function(){
+                $(".txt1").animate({
+                    marginLeft: "500px",
+                    fontSize: "30px"
+                }, 2000, "swing", function(){
+                    alert("모션 완료");
+                });
+
+            });
+
+            $(".btn2").click(function(){
+                $(".txt2").animate({
+                    marginLeft: "+=50px"
+                }, 800);
+            });
+
+        });
+    </script>
+</body>
+</html>

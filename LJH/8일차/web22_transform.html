@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 트랜스폼 속성(변형 속성)</title>
+    <style>
+        #wrap {width: 1200px; height: 2000px; background-color: rgba(0,0,0,.3); margin: auto;}
+        .box {width: 300px; height: 300px; background-color: rgba(255,0,0,.5); float: left; margin: 50px; font-size: 50px; text-align: center; line-height: 300px; transition: 1s;}
+
+        /* transform: scale(); 요소를 X축이나 Y축으로 확대/축소
+        배수단위 비율 또는 % 등을 넣을 수 있다.
+        1(100%)보다 작으면 축소, 1보다 크면 확대
+        기준점은 요소의 정중앙. transform-origin 속성으로 기준점 변경 가능 */
+        .scalex:hover {transform: scaleX(1.2);}
+        .scaley:hover {transform: scaleY(0.8);}
+        .scale:hover {transform: scale(1.5,0.5);}
+
+        /* transform: rotate(); 요소를 회전.
+        괄호 안에는 각도를 넣는다. 음수 각도 사용 가능 (ex: 45deg)
+        기준점은 요소의 정중앙. transform-origin 속성으로 기준점 변경 가능 */
+        .rotatex:hover {transform: rotateX(180deg);}
+        .rotatey:hover {transform: rotateY(360deg);}
+        .rotate:hover {transform: rotate(45deg);}
+
+        /* transform: skew(); 요소를 기울이기.
+        skew() 값을 한개만 넣으면 X축으로 인식
+        두개를 콤마로 넣으면 X축,Y축으로 인식
+        괄호 안에는 각도를 넣는다. 음수 각도 사용 가능 (ex: 45deg)
+        기준점은 요소의 정중앙. transform-origin 속성으로 기준점 변경 가능 */
+        .skewx:hover {transform: skewX(-40deg);}
+        .skewy:hover {transform: skewY(40deg);}
+        .skew:hover {transform: skew(40deg,20deg);}
+
+        /* transform: translate(); 요소를 이동.
+        이동거리만큼 X축 또는 Y축으로 이동. px, % 등 여러 단위 이용 가능.
+        %단위의 기준으로 요소의 크기 기준. (50% : 요소 크기의 1/2, 100% : 요소의 크기)
+        양수는 우측/하단으로 이동, 음수는 좌측/상단으로 이동 */
+        .translatex:hover {transform: translateX(50px);}
+        .translatey:hover {transform: translateY(-50px);}
+        .translate:hover {transform: translate(-50%,-50%);}
+
+        /* transform-origin: transform속성은 기본적으로 요소의 정중앙을 기준으로 변형이 된다. 그 기준점을 바꿀 때 사용하는 속성.
+        transform-origin: X축값 Y축값;(순서)
+        X축 : 길이값(px, em, ....), 백분율(%), left, center(기본값), right
+        Y축 : 길이값(px, em, ....), 백분율(%), top, center(기본값), bottom */
+        .origin01:hover {transform: scale(1.5); transform-origin: 100% 100%;}
+        .origin02:hover {transform: rotate(-25deg); transform-origin: left top;}
+        .origin03:hover {transform: rotate(180deg); transform-origin: top;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box scalex">scalex</div>
+        <div class="box scaley">scaley</div>
+        <div class="box scale">scale</div>
+        <div class="box rotatex">rotatex</div>
+        <div class="box rotatey">rotatey</div>
+        <div class="box rotate">rotate</div>
+        <div class="box skewx">skewx</div>
+        <div class="box skewy">skewy</div>
+        <div class="box skew">skew</div>
+        <div class="box translatex">translatex</div>
+        <div class="box translatey">translatey</div>
+        <div class="box translate">translate</div>
+        <div class="box origin01">origin01</div>
+        <div class="box origin02">origin02</div>
+        <div class="box origin03">origin03</div>
+    </div>
+</body>
+</html>

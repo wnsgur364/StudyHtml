@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>AOS 스크롤 애니메이션</title>
+    <style>
+        div {width: 300px; height: 200px; margin: 50px auto;}
+        .section {width: 1500px; height: 800px; background-color: lightgray;}
+        .test01 {background-color: tomato;}
+        .test02 {background-color: thistle;}
+        .test03 {background-color: cornflowerblue;}
+        .test04 {background-color: gold;}
+    </style>
+</head>
+<body>
+    <div class="section">섹션</div>
+    <div class="test01" data-aos="fade-up">1번 박스</div>
+    <div class="test02" data-aos="flip-right" data-aos-duration="3000">2번 박스</div>
+    <div class="test03" data-aos="zoom-in-left">3번 박스</div>
+    <div class="test04" data-aos="zoom-out-up">4번 박스</div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

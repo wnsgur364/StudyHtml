@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin 속성</title>
+    <style>
+        * {margin: 0;}
+        div {width: 100px; height: 100px;}
+        /* margin속성은 요소의 바깥쪽에 들어가는 간격을 의미한다. (요소 간 간격) */
+
+        #box01 {background-color: rgba(0,0,0,.1); margin: auto;}
+        /* 요소의 양 옆에 자동으로 같은 마진을 설정해서 수평중앙정렬
+        현재는 margin: 0 auto; 와도 같다. */
+
+        #box02 {background-color: rgba(0,0,0,.2); margin: 10px;}
+        /* margin값을 한 개만 넣은 경우 사방에(상,우,하,좌) 10px 값이 공통 적용된다. */
+
+        #box03 {background-color: rgba(0,0,0,.3); margin: 10px 20px;}
+        /* margin값을 두 개 넣은 경우 마주보는 방향에 묶어서 공통 적용된다.
+        첫번째 값은 상,하에 10px
+        두번째 값은 좌,우에 20px */
+
+        #box04 {background-color: rgba(0,0,0,.4); margin: 10px 20px 30px;}
+        /* margin값은 세 개 넣은 경우
+        첫번째 값은 상단에 10px,
+        두번째 값은 좌,우에 20px
+        세번째 값은 하단에 30px */
+
+        #box05 {background-color: rgba(0,0,0,.5); margin: 10px 20px 30px 40px;}
+        /* margin값을 네 개 넣은 경우
+        12시부터 시작해 시계방향으로 적용/상우하좌 순서
+        1) 축약형 작성
+        margin: 10px 20px 30px 40px;
+        2) 풀어서 작성
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+         */
+
+        #box06 {background-color: rgba(0,0,0,.6); margin: 10px auto;}
+        /* 박스의 상,하단에 10px(마주보는 방향)
+        좌,우에 auto를 적용(마주보는 방향) 수평중앙정렬
+        (수직방향에서 auto 불가!) */
+
+        #box07 {background-color: rgba(0,0,0,.7); margin: 0 auto 30px;}
+        /* 상단에 0, 좌우에 auto, 하단에 30px */
+
+
+        /* 마진 사용시 주의사항
+        1. 마진값은 상,하단에서 겹치는 현상이 있습니다. 큰 값과 작은 값이 겹쳐지면 큰 값만 적용됩니다.(마진겹침현상, 마진중첩현상)
+
+        2. 마진을 자식요소의 상단에 넣는 경우 부모요소가 함께 밀리거나, 제대로 적용이 안되는 경우가 종종 있습니다. 상단에 간격을 넣어야 하는 경우 부모요소에서 패딩을 넣거나, 위쪽에 있는 요소에서 하단으로 마진을 주는 방법이 안전합니다.
+         */
+    </style>
+</head>
+<body>
+    <div id="box01">박스01</div>
+    <div id="box02">박스02</div>
+    <div id="box03">박스03</div>
+    <div id="box04">박스04</div>
+    <div id="box05">박스05</div>
+    <div id="box06">박스06</div>
+    <div id="box07">박스07</div>
+</body>
+</html>

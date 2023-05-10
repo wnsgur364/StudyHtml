@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 애니메이션</title>
+    <style>
+        #container {width: 300px; height: 300px; background-color: lightgray; position: relative;}
+        #box {width: 100px; height: 100px; background-color: red; position: absolute;
+            animation-name: ani01;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani01 {
+            /* from {background-color: red;}
+            to {background-color: yellow;} */
+
+            0% {background-color: red; left: 0; top: 0;}
+            25% {background-color: blue; left: 200px; top: 0;}
+            50% {background-color: green; left: 200px; top: 200px; border-radius: 50%;}
+            75% {background-color: yellow; left: 0; top: 200px;}
+            100% {background-color: red; left: 0; top: 0;}
+        }
+
+        /* 
+        애니메이션을 지정할 키프레임을 만든 다음, 해당 요소에 animation-name 속성을 사용해 키프레임을 연결시킨다.
+        키프레임에는 애니메이션이 진행되는 시간별 요소(모양)를 작성한다.
+        0~100%로 나누어 작성하고, 0%는 from, 100%는 to로 대체하여 작성할 수 있다.
+        animation-duration: 애니메이션이 진행되는 시간
+        animation-delay: 애니메이션 시작 전 지연 시간
+        animation-iteration-count: 애니메이션 반복 횟수(미지정시 한번 실행되고 끝/infinite: 무한반복)
+        animation-direction: 애니메이션 진행 방향 설정(reverse: 키프레임에 지정한 반대 방향 / alternate: 시작>끝>시작...)       
+        */
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+</body>
+</html>

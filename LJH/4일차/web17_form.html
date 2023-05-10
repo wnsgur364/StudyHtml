@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form태그(입력 양식 태그)</title>
+</head>
+<body>
+    <form action="http://naver.com" method="get">
+        <!-- form태그 : 사용자에게 입력받는 공간을 만들어주는 태그들을 묶어준다.
+        form태그의 대표 속성
+        - action속성 : form태그 안의 내용들을 서버로 보낼 때 해당 데이터가 도착할 URL주소(또는 프로그램). HTML5에서는 필수 아님
+        - method속성 : form 내용을 서버로 보내는 방식을 선택
+          - get: 주소표시줄에 내용을 담아 전송. 보안 취약, 길이 제한 O
+          - post: 편지봉투에 내용을 담아 전송. 내용이 드러나지 않고, 길이 제한 X -->
+        <fieldset> <!-- 폼 요소들을 묶어주는 역할을 하는 태그(필수 아니나 관련된 내용이면 묶어주는게 좋다.) -->
+            <legend>로그인 정보</legend> <!-- fieldset태그의 제목을 달아주는 태그(fielset 안에서만 사용) -->
+            <ul>
+                <li>
+                    <label for="user_id">ID</label> <!-- input태그에 레이블을 달아주는 태그. inline요소 -->
+                    <input type="text" id="user_id" size="10" minlength="3" maxlength="5" placeholder="아이디는 3자 이상 5자 이하" required> <!-- 사용자에게 내용을 입력받는 양식을 만드는 태그. type속성값에 따라 다르게 생김. inline-block요소 -->
+                    <!-- input태그의 text필드에 입력할 수 있는 속성들
+                    size: 입력칸의 크기 조절. 값은 숫자로 입력
+                    minlength: 최소 글자 수 제한
+                    maxlength: 최대 글자 수 제한
+                    placeholder: 힌트 주기(단, 힌트 속성으로 레이블 대체하지 말것!)
+                    required: 필수 입력 필드로 만들기
+                    autofocus: 자동 커서 입력(한 개만 입력할 것) -->
+                </li>
+                <li>
+                    <label for="user_pw">PW</label>
+                    <input type="password" id="user_pw" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" required>
+                </li>
+                <li>
+                    <label for="user_phone">연락처</label>
+                    <input type="tel" id="user_phone" required>
+                </li>
+                <li>
+                    <label for="user_email">이메일</label>
+                    <input type="email" id="user_email" required>
+                </li>
+                <li>
+                    <label for="user_web">웹사이트</label>
+                    <input type="url" id="user_web" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>등록 정보</legend>
+            <ul>
+                <li>
+                    <label>참여인원(최대 10명)</label>
+                    <input type="number" value="1" min="1" max="10">
+                    <!-- value: 초깃값(=기본값) 설정(값을 먼저 입력해놓는다)
+                    min: 최솟값 설정
+                    max: 최댓값 설정 -->
+                </li>
+                <li>
+                    <label>지원 물품 신청(1인당 5개)</label>
+                    <input type="number" value="5" min="0" max="50" step="5">
+                    <!-- step: 늘어나거나 줄어드는 간격 -->
+                </li>
+                <li>
+                    <label>희망 단계(하,중,상)</label>
+                    <input type="range" value="1" min="1" max="3">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>부가 정보</legend>
+            <ul>
+                <li>
+                    <p>라디오 버튼(성별)</p>
+                    <input type="radio" id="male" value="male" name="gender">
+                    <label for="male">남자</label>
+                    <input type="radio" id="female" value="female" name="gender">
+                    <label for="female">여자</label>
+                    <!-- 라디오 버튼은 여러 항목 중 한 개만 선택 가능하게 할 경우 주로 사용한다. 여러 개 중 한 개를 선택할 수 있게 하려면 name 속성에 동일한 값을 적용시켜주면 된다.(그룹 짓는 개념) value 속성 필수로 입력할 것! 서버로 값을 넘길 때 value에 저장된 속성값이 전송된다. -->
+                </li>
+                <li>
+                    <p>체크박스(관심사)</p>
+                    <label>
+                        <input type="checkbox" name="interest" value="game"> 게임
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="sports"> 스포츠
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="reading"> 독서
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="music"> 음악감상
+                    </label>
+                    <!-- 체크박스는 여러개(복수)로 선택 가능하게 할 때 사용한다. 사용법은 라디오 버튼과 동일. 체크박스 개수 제한은 스크립트로 처리해야함.
+                    
+                    input태그와 label태그 연결(포커스) 방법
+                    레이블을 클릭했을 때 해당 인풋에 선택이 될 수 있게 하는 방법
+                    1. input태그의 id 속성값과 label태그의 for 속성값 일치(명시적 연결)
+                    2. label태그의 내부에 input태그 작성(암시적 연결)
+                       이 경우 id, for속성 필요 없음. 단, 하위버전 브라우저에서 인식하지 못할 수 있다.
+
+                    가급적이면 명시적으로 input과 label을 따로 작성해 연결해주는 것이 안전하고, 접근성 측면에서도 명시적 방법이 좋다.
+                -->
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>컬러, 날짜, 시간 입력기</legend>
+            <ul>
+                <li>
+                    <label>컬러 선택</label>
+                    <input type="color" value="#ff0000">
+                </li>
+                <li>
+                    <label>날짜 선택</label>
+                    <input type="date" value="2023-01-01">
+                </li>
+                <li>
+                    <label>날짜 및 시간 선택</label>
+                    <input type="datetime-local" value="2023-01-01T20:00">
+                </li>
+                <li>
+                    <label>시간 선택</label>
+                    <input type="time" value="10:10" step="600">
+                    <!-- 시간선택기에서 step은 초단위 숫자 간격 -->
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>그 외 폼 관련 태그들</legend>
+            <p>파일 첨부</p>
+            <input type="file">
+            <p>현재 진행 상태 막대(progress bar)</p>
+            <progress max="100" value="50"></progress>
+            <p>범위 내 값 표시</p>
+            <meter min="0" max="100" low="20" high="80" value="50"></meter>
+        </fieldset>
+        <fieldset>
+            <legend>텍스트 여러 줄 작성</legend>
+            <!-- <textarea cols="30" rows="10"></textarea> -->
+            <textarea style="width: 400px; height: 200px; resize: none;" readonly>
+textarea 영역에 글을 먼저 넣어놓고 싶을 때
+(예시로, 글 양식을 먼저 지정해놓는 경우)
+여기에 입력하면 됩니다.
+주의할 점은 엔터, 띄어쓰기, 탭(tab) 등이 모두 노출되기 때문에
+코드가 좀 지저분해져도 붙여서 써야 합니다.
+            </textarea>
+            <!-- readonly속성 : 읽기전용 속성. 사용자가 작성 못하고 볼 수 있게만 만듬
+            textarea 크기 조절: cols="숫자" : 가로너비(글자수) / rows="숫자" : 세로 높이(줄개수)
+            CSS로도 조절 가능하기 때문에 사용 빈도 낮아졌다.
+            resize: none; 사용자가 박스 크기 조절 못하게 막아줌. -->
+        </fieldset>
+        <fieldset>
+            <legend>셀렉트 박스</legend>
+            <select>
+                <option disabled>---선택하세요---</option>
+                <option value="strawberry">딸기</option>
+                <option value="banana" selected>바나나</option>
+                <option value="orange">오렌지</option>
+                <optgroup label="스포츠">
+                    <option value="basketball">농구</option>
+                    <option value="baseball">야구</option>
+                    <option value="soccer">축구</option>
+                </optgroup>
+                <!-- 옵션 요소들을 그룹짓고 싶을 때 optgroup태그로 감싸주면 된다.
+                disabled속성 : 선택 막기
+                selected속성 : 선택한 상태로 표시할 때 -->
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>버튼들</legend>
+            <input type="submit" value="확인">
+            <input type="reset" value="초기화">
+            <input type="image" src="https://img.freepik.com/premium-photo/red-button-isolated_44074-4297.jpg?w=2000" style="width: 100px" alt="확인 버튼"> <!-- submit(=제출=확인) 역할 -->
+            <input type="button" value="안녕">
+            <button type="reset">버튼태그</button> <!-- 기본 동작은 submit -->
+            <!-- 버튼을 넣을 경우 html5 이상에서는 버튼 태그로 넣는 것을 선호한다. 접근성 측면에서도 유리하며(시맨틱), 버튼 안에 콘텐츠(이미지 등..)를 포함할 수 있기 때문에 다른 버튼 요소들보다 디자인하기가 더 수월하다. -->
+        </fieldset>
+    </form>
+</body>
+</html>

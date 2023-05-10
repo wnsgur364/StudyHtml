@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 DOM 객체</title>
+</head>
+<body>
+    <h1 id="one">웹퍼블리셔</h1>
+    <p>안녕하세요~~~</p>
+    <h2>떡볶이</h2>
+    <p id="second">먹고싶다.</p>
+    <img id="naverImage" src="https://ssl.pstatic.net/melona/libs/1436/1436326/aa9ca11a81aeae5ccf7f_20230414094824749.jpg" alt="네이버 이미지">
+    <ul>
+        <li class="list">강아지</li>
+        <li class="list">고양이</li>
+        <li class="list">토끼</li>
+        <li class="list">햄스터</li>
+        <li class="list">거북이</li>
+    </ul>
+    <p id="test"></p>
+    <p id="test1"></p>
+
+    <script>
+
+        // 아이디로 요소 찾기
+        // var text = document.getElementById("one").innerHTML;
+        // alert("제목 내용: " + text);
+        // .getElementById("아이디") : id를 가지고 있는 요소를 찾는다.
+        // .innerHTML : html 태그 내의 내용을 가져옴(또는 변경)
+
+
+        // 태그로 요소 찾기
+        // var paragraph = document.getElementsByTagName("p");
+        // console.log(paragraph);
+        // alert("두번째 p태그의 원래 내용 " + paragraph[1].innerHTML);
+        // .getElementsByTagName("태그") : 태그명으로 요소를 찾는다. 해당 태그가 여러개면 유사배열(HTML Collection)로 가져오고, 불러와 사용할 때는 배열과 같이 인덱스번호를 입력해서 사용한다.
+        // console.log(paragraph[0]);
+
+
+        // html요소의 속성 변경
+        document.getElementById("naverImage").src = "https://s.pstatic.net/static/www/mobile/edit/20230418/mobile_18161815891.jpg";
+        // naverImage 아이디를 찾고, 그 요소의 src 속성값을 변경
+        // .attribute (속성) : 요소의 속성값을 가져오거나 변경할 경우 attribute 프로퍼티를 이용한다.(원하는 속성명을 작성한다.)
+        // ex: 앵커태그의 href 속성값을 가져올 경우
+        // document.getElementById("앵커태그의 아이디").href
+
+
+        // class명으로 요소 찾기
+        var listItem = document.getElementsByClassName("list");
+        // .list 클래스를 갖고있는 요소들(5개)
+        document.getElementById("test").innerHTML = 'class="list"인 것 중 두번째 내용(index 1번째) : ' + listItem[1].innerHTML;
+        // #test 안의 '내용'을 .list 중 인덱스번호 1번 안의 '내용'으로 대체(삽입, 대입)
+        // class명으로 요소를 찾으면 TagName같이 유사배열 형태로 가져온다.(인덱스번호로 선택해야 함)
+
+
+        var x = document.querySelectorAll("li.list");
+        var y = document.querySelector("li.list");
+
+        console.log(x);
+        console.log(y);
+
+        // .querySelectorAll("CSS선택자") : CSS선택자로 html 요소 찾기. 유사배열 형태로 가져옴. length속성(개수)을 가진다.
+        // .querySelector("CSS선택자") : CSS선택자로 html 요소 찾기. 요소들 중 첫번째 요소 한개만 가져온다.
+
+        document.getElementById("test1").innerHTML = x[3].innerHTML;
+
+    </script>
+</body>
+</html>

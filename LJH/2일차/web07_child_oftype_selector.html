@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 선택자</title>
+    <style>
+        /* 일반 구조 선택자(-child selector) : 자식의 '순번' 위주로 선택하는 방법. 태그의 이름을 잘 보고 작성할 것! 형제관계에 있는 요소들을 순번으로 선택하는 방법
+        ★중간중간에 다른 형태의 형제요소가 끼어있어도 순번을 포함해서 센다. */
+        ul>li:first-child {color: red;} /* ul의 자식요소 중 첫번째 자식인데 li인 것 */
+        ul>h2:last-child {color: green;} /* ul의 자식요소 중 마지막번째 자식인데 h2인 것 */
+        ul>li:nth-child(9) {color: hotpink;} /* ul의 자식요소 중 아홉번째 자식인데 li인 것 */
+        ul>li:nth-last-child(2) {font-size: 30px;} /* ul의 자식요소 중 뒤에서 두번째 자식인데 li인 것 */
+        /* ul>li:nth-child(2n) {background-color: yellow;} */ /* ul의 자식요소 중 짝수번째 자식인데 li인 것 */
+        ul>li:nth-child(even) {background-color: yellow;} /* 짝수 */
+        ul>li:nth-child(2n+1) {background-color: skyblue;} /* 홀수 */
+        /* ul>li:nth-child(odd) {background-color: skyblue;} */
+
+        /* 형태 구조 선택자(-of-type selector) : 형태를 구분해서 그 안에서 순서를 센다. ★형태가 다른 요소는 건너뛴다. */
+        ol>li:first-of-type {color: red;} /* ol의 자식 중 li 중에 첫번째 */
+        ol>li:last-of-type {color: orange;} /* ol의 자식 중 li 중에 마지막번째 */
+        ol>h2:first-of-type {font-size: 14px;} /* ol>h2:last-of-type도 된다. 그러나 그냥 ol>h2도 된다. */
+        ol>li:nth-of-type(4) {color: blue;} /* ol>li:nth-child(6)과 같다. */
+        ol>li:nth-last-of-type(2) {color: tomato;}
+        ol>li:nth-of-type(2n) {background-color: lime;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>짜장</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li>마파밥</li>
+        <h2>북경반점</h2>
+        <li>삼선짬뽕</li>
+        <li>유산슬</li>
+        <li>깐풍기</li>
+        <li>쟁반짜장</li>
+        <h2>홍콩반점</h2>
+    </ul>
+    <hr>
+    <ol>
+        <h1>면류</h1>
+        <li>짜장</li>
+        <li>짬뽕</li>
+        <li>울면</li>
+        <h1>식사류</h1>
+        <li>마파밥</li>
+        <li>볶음밥</li>
+        <li>짬뽕밥</li>
+        <h1>요리류</h1>
+        <li>유산슬</li>
+        <li>깐풍기</li>
+        <h2>식사맛있게하세요</h2>
+    </ol>
+</body>
+</html>

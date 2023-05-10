@@ -1,0 +1,35 @@
+@charset "utf-8"; /* CSS 파일 내부의 캐릭터셋(문자세트) 설정. 파일 내부의 첫번째 줄에 기입 */
+
+
+/* 자식요소의 위치 지정시 position: absolute;를 사용하여 지정할 경우 부모요소를 기준으로 위치를 잡으려면 position: relative/absolute/fixed를 부모요소에게 지정하면 된다.
+        
+부모요소의 위치가 변경될 일이 없다면
+position: relative;만 지정하면 되고
+
+부모요소의 위치가 움직여야 할 때는
+position: relative;와 함께 상대위치값을 지정하거나
+position: absolute;와 함께 절대위치값을 지정하거나
+position: fixed;와 함께 고정위치값을 지정하면 된다.
+
+*/
+
+* {margin: 0; padding: 0;}
+#wrap {width: 800px; height: 600px; background-color: lightgray; margin: auto; position: relative;}
+.box {width: 200px; height: 200px; background-color: white; border-radius: 20px; position: absolute;}
+
+.box01 {left: 200px; top: 0;}
+.box02 {left: 0; top: 200px;}
+.box03 {left: 200px; top: 200px;}
+.box04 {right: 0; top: 200px;}
+.box05 {top: 200px; right: 200px;}
+.box06 {left: 200px; bottom: 0;}
+
+.dot {width: 40px; height: 40px; background-color: black; border-radius: 20px; position: absolute;}
+
+.center {left: 50%; top: 50%; margin: -20px 0 0 -20px;}
+.left_top {left: 20px; top: 20px;}
+.left_center {left: 20px; top: 80px;}
+.left_bottom {left: 20px; bottom: 20px;}
+.right_top {right: 20px; top: 20px;}
+.right_center {right: 20px; top: 80px;}
+.right_bottom {right: 20px; bottom: 20px;}

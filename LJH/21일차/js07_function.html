@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(function)</title>
+</head>
+<body>
+    <script>
+
+        // 함수(function) : 변수는 특정 값을 담는 수라고 한다면 함수는 특정 기능을 하는 코드 덩어리를 담을 수 있다. 바로 실행되는게 아니라, 호출해서 사용한다.
+
+        // 1. 함수의 선언 방법
+        // function 함수명() {
+        //     자바스크립트 코드;
+        // }
+
+        // 2. 익명함수 선언 방법
+        // 참조변수명 = function() {
+        //     자바스크립트 코드;
+        // }
+
+        // 3. 함수의 호출 방법(호출한 위치에서 코드가 실행된다.)
+        // 함수명();
+        // 참조변수명();
+        // 뒤에 괄호()를 붙여서 써야함! 붙이지 않으면 변수로 인식한다.
+
+
+        // var a = 0;  // 전역변수(글로벌변수) : 함수의 바깥쪽에 선언한 변수. 함수에서 바깥에 있는 변수를 가져다 쓸 수 있다.
+        // function number() {
+        //     // var a = 0;   // 지역변수(로컬변수) : 함수의 안쪽에 선언한 변수. 함수의 바깥쪽에서 꺼내서 쓸 수 없다.
+        //     // document.write(a, "<br>");
+        //     // document.write(a+=1, "<br>");
+        //     // document.write(a+=1, "<br>");
+        //     // document.write(a+=1, "<br>");
+        //     // document.write(a+=1, "<br>");
+        //     // a = 0;
+
+        //     for(var i = 0; i < 5; i++){
+        //         document.write(i, "<br>");
+        //     }
+        // }
+
+        // number();
+        // number();
+
+        // let a = 0;  // 전역변수(글로벌변수) : 함수의 바깥쪽에 선언한 변수. 함수에서 바깥에 있는 변수를 가져다 쓸 수 있다.
+        // function number() {
+        //     // let a = 0;   // 지역변수(로컬변수) : 함수의 안쪽에 선언한 변수. 함수의 바깥쪽에서 꺼내서 쓸 수 없다.
+
+        //     for(let i = 0; i < 5; i++){ // let 변수는 블록스코프(범위)에서 선언한 것도 지역변수이다.
+        //         document.write(i, "<br>");
+        //     }
+        // }
+
+
+
+        // 기본 함수와 익명 함수의 호출 방식의 차이(호이스팅)
+        // var count = 0;
+
+        // myFnc();    // 기본 함수는 함수의 선언 전에 호출을 해도 호이스팅(끌어올려 사용)으로 인해 호출이 가능
+        // theFnc();   // 익명 함수는 먼저 선언 후 호출해야 실행이 가능하다.(현재는 선언 전에 호출했기 때문에 실행 안됨. 오류)
+
+        // function myFnc() {
+        //     count++;
+        //     document.write("기본함수" + count, "<br>");
+        // }
+
+        // var theFnc = function() {
+        //     count++;
+        //     document.write("익명함수" + count, "<br>");
+        // }
+
+        // // myFnc();
+        // // theFnc();
+
+
+
+        // 매개변수가 있는 함수의 정의문 : 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있다. (기존 함수는 값을 전달할 수 없음)
+        // 선언 방법
+        // function 함수명(매개변수1, 매개변수2, 매개변수3...) {
+        //     자바스크립트 코드;
+        // }
+        // 호출
+        // 함수명(데이터1, 데이터2, 데이터3...);
+
+        function hello(name, area) {
+            document.write("안녕하세요. " + name + "입니다.<br>");
+            document.write("사는 곳은 " + area + "입니다.<br>");
+        }
+
+        hello("김명은","서울");
+
+        // 기존 방식
+        var name1 = "오징어";
+        var area1 = "울릉도";
+
+        function hello1() {
+            document.write("안녕하세요. " + name1 + "입니다.<br>");
+            document.write("사는 곳은 " + area1 + "입니다.<br>");
+        }
+
+        hello1();
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

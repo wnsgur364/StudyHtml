@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding속성</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        div {width: 200px; height: 200px; background-color: lightgray; margin-bottom: 10px;}
+
+        #box01 {padding: 50px 0 0; height: 150px;}
+        /* 상단에서 글자를 50px만큼 띄운 경우, 높잇값에서 늘어난만큼(50px) 빼준다. */
+
+        #box02 {padding: 0 0 0 25px; width: 175px;}
+        /* 좌측에서 글자를 25px만큼 띄운 경우, 너빗값에서 늘어난큼(25px) 빼준다. */
+
+        #box03 {padding: 75px 0 0 25px; height: 125px; width: 175px;}
+        /* 상단에서 75px만큼, 좌측에서 25px만큼 띄운 경우 */
+
+        #box04 {padding: 25px 0 25px 50px; height: 150px; width: 150px; overflow-y: auto; /*overflow-x: scroll; white-space: nowrap;*/}
+        /* 상단, 하단에서 25px만큼 띄우고, 좌측에서 50px만큼 박스 안에 여백을 넣어보세요.(박스의 보이는 크기는 유지) */
+
+        /* overflow: hidden; 흘러넘치는 것을 가려줌
+        overflow: scroll; 흘러넘치는 것을 스크롤바를 나타내줌
+        overflow-x: scroll; x축으로만 스크롤바 표시
+        overflow-y: scroll; y축으로만 스크롤바 표시
+        overflow: auto; 흘러넘치면 스크롤바 표시, 넘치치 않으면 스크롤바 없음(내용에 따라 변경)
+        overflow: visible; 흘러넘쳐도 보여줌(기본값)
+
+        자식요소가 float으로 떠있는 경우 부모요소에게 overflow: hidden;을 적용해 float을 해제할 수 있다.
+         */
+
+        #box05 {padding: 10px; border: 10px solid red; box-sizing: content-box; text-align: center;}
+        #box05_01 {width: 100px; height: 100px; background-color: blue; margin: auto;}
+        #box06 {padding: 10px; border: 10px solid red; box-sizing: border-box;}
+        /* box-sizing: content-box; (기본값)
+        패딩, 보더 값이 너비, 높이 영역의 바깥쪽에 추가된다.(박스의 크기가 늘어나보임)
+        box-sizing: border-box;
+        패딩, 보더 값이 너비, 높이 영역의 안쪽에 포함된다.(박스의 크기가 늘어나지 않음)
+        http://caniuse.com
+         */
+
+
+        /* 기본적으로 요소 안에서 내용(content. 글자, 자식요소, 이미지 등등..)은 왼쪽 상단에 붙는다.
+        패딩은 축약형으로 사용시 마진과 순서가 같다.(단, auto 제외)
+        넣은 만큼 요소의 보여지는 크기가 늘어나기 때문에 늘어난 만큼 빼주거나 box-sizing: border-box;를 적용한다.
+        요소 안쪽 내용(inline요소. 글자, 그림..)이 가운데 정렬이 되게 하려면 text-align: center;를 이용
+        요소 안에 자식요소(block요소)가 들어간 경우 자식 요소를 가운데 정렬하려면 해당 요소에 margin: auto;를 적용한다.
+         */
+    </style>
+</head>
+<body>
+    <div id="box01">padding</div>
+    <div id="box02">padding</div>
+    <div id="box03">padding</div>
+    <div id="box04">이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다. 이번에는 줄이 여러줄인 문장을 넣어보겠습니다.</div>
+    <div id="box05">content-box
+        <div id="box05_01"></div>
+    </div>
+    <div id="box06">border-box</div>
+</body>
+</html>

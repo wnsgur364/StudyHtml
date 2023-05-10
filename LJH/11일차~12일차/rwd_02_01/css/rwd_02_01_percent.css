@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+
+#wrap {width: 960px; height: 1460px; background-color: rgba(0,0,0,.1); margin: auto;}
+
+#header {width: 100%; height: 150px; background-color: rgba(255,0,0,.1); margin-bottom: 10px; position: relative;}
+/* #header h1,
+#header p {height: 60px;} */
+#header h1,
+#header p {padding-left: 10px;}
+/* block요소에 너비가 지정되지 않은 경우, 패딩을 넣어도 늘어나지 않고 부모요소를 꽉 채운다. */
+#lnb {width: 100%; height: 30px; background-color: rgba(0,255,0,.1); position: absolute; bottom: 0;}
+#lnb li {width: 192px; height: 30px; background-color: rgba(0,0,0,.1); float: left;}
+#lnb li:nth-child(2n) {background-color: rgba(0,0,0,.2);}
+
+#main_visual {width: 100%; height: 600px; background-color: rgba(0,0,255,.1);}
+.contents {width: 220px; height: 280px; background-color: rgba(255,100,0,.1); text-align: center; float: left; margin: 10px;}
+.contents h4 {margin: 20px 0 10px;}
+.cont_img {width: 220px; height: 150px; background-color: rgba(255,100,0,.1);}
+
+#footer {width: 100%; height: 100px; background-color: rgba(0,255,255,.1); clear: both;}
+
+
+/* 태블릿버전 미디어쿼리 */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    #wrap {width: 100%; height: 1857px;}
+    #lnb li  {width: 20%;}
+    #main_visual {height: 400px;}
+    .contents {width: 47%; margin: 10px 1.5%;}
+    .cont_img {width: 100%;}
+}
+
+/* 모바일버전 미디어쿼리 */
+@media screen and (max-width: 599px) {
+    #wrap {width: 100%; height: 2910px;}
+    #header {height: 270px;}
+    #lnb {height: 150px;}
+    #lnb li {width: 100%;}
+    #main_visual {height: 200px; margin-bottom: 10px;}
+    .contents {width: 94%;
+        float: none;
+        
+        /* margin-left: auto; margin-right: auto;
+        margin-left: 3%; margin-right: 3%; */
+        margin: 10px auto;
+        /* margin: 10px 3%; */
+
+    }
+    .cont_img {width: 100%;}
+}

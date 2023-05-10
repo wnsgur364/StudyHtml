@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 예제</title>
+    <style>
+        .hello {width: 100px; height: 100px; background-color: tomato; position: absolute;}
+        .circle {width: 100px; height: 100px; background-color: aquamarine; position: absolute; border-radius: 50%;}
+    </style>
+</head>
+<body>
+    <button class="btn1">애니메이션 버튼</button>
+    <div class="hello">안녕하세요</div>
+
+    <div class="circle"></div>
+    <button class="btn2">애니메이션 멈춤</button>
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            $(".btn1").click(function(){
+                $(".hello").animate({
+                                left: "250px",
+                                opacity: .5,
+                                width: "150px",
+                                height: "150px"
+                                }, 600, "easeOutBounce")
+                            .animate({
+                                height : "300px",
+                                opacity : 0.4
+                            })
+                            .animate({
+                                width: "300px",
+                                opacity: 0.8
+                            });
+            });
+
+            function circleMove() {
+
+                $(".circle").animate({left: "200px"}, 1000)
+                            .animate({left: 0}, 1000);
+
+            }
+
+
+            // $(".btn1").click(function(){
+            //     circleMove();
+            // });
+            // $(".btn1").click(circleMove);
+
+            // .click(function(){ 함수() }); click 이벤트 안에 실행문에 함수를 재호출 할 경우에는 함수명 뒤에 ()괄호를 붙여서 써야 함
+
+            var circle = setInterval(circleMove, 2000);
+                    // setInterval(반복실행할 코드, 반복실행 간격);
+                    // 2초 간격으로 circleMove 함수 반복 실행
+                    // clearInterval(인터벌함수명=참조변수)
+                    // 반복실행 해제
+
+            $(".btn2").click(function(){
+                clearInterval(circle);
+            });
+            // .btn2를 클릭하면 애니메이션 반복실행 멈춤
+
+
+            setInterval(function(){
+                console.log("hello");
+            }, 2000);
+
+
+        });
+    </script>
+</body>
+</html>

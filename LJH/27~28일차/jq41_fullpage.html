@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+  <!-- 풀페이지 -->
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+  <!-- 팬시박스 -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
+  <style>
+    #section0 {
+      background-image: url("img/image_01.jpg");
+      background-attachment: fixed;
+    }
+
+    #myVideo{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-color: black; /* in case the video doesn't fit the whole page*/
+  		/* background-image: our video; */
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section2 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+  .fancybox {width: 830px; height: 410px; margin: auto; padding-top: 50px; display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
+  .fancybox img {vertical-align: top;}
+  </style>
+</head>
+<body>
+
+<ul id="menu">
+    <li class="active"><a href="#firstPage">First slide</a></li>
+    <li><a href="#secondPage">Second slide</a></li>
+    <li><a href="#thirdPage">Third slide</a></li>
+    <li><a href="#fourthPage">4페이지</a></li>
+</ul>
+
+<!-- slide 또는 section에 active 클래스를 붙이면 로딩시 해당 섹션으로 먼저 로딩이 된다. -->
+<div id="fullpage">
+	<div class="section" id="section0">
+    <h1>fullPage.js</h1>
+    <p>안녕하세요<br>여러 줄이 들어가면 어떻게 나오는지<br>살펴봅시다.</p>
+  </div>
+	<div class="section" id="section1">
+	    <div class="slide">
+        <h1>Simple Demo</h1>
+        <div class="fancybox">
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+          <a href="img/image_01.jpg" data-fancybox="gallery" data-caption="갤러리1"><img src="img/thumbnail_01.jpg" alt=""></a>
+        </div>
+      </div>
+	    <div class="slide"><h1>Only text</h1></div>
+	    <div class="slide"><h1>And text</h1></div>
+	    <div class="slide"><h1>And more text</h1></div>
+	</div>
+	<div class="section" id="section2">
+    <video id="myVideo" loop muted data-autoplay playsinline>
+			<source src="img/flowers.mp4" type="video/mp4">
+			<!-- <source src="imgs/flowers.webm" type="video/webm"> -->
+		</video>
+		<div class="layer">
+			<h1>fullPage.js videos</h1>
+			<p>Don't forget to add "playsinline" attribute to make it work on phones</p>
+		</div>
+  </div>
+	<div class="section" id="section3">
+    <h1>Just the simplest demo ever</h1>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    anchors:['firstPage', 'secondPage', 'thirdPage', '4페이지'],
+    verticalCentered: false,
+    css3:false
+	});
+
+  Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+  });
+
+</script>
+</body>
+</html>

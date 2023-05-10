@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 정가운데 정렬하기</title>
+    <style>
+        #mom01 {width: 500px; height: 300px; background-color: lightgray; margin-bottom: 30px; position: relative;}
+        #son01 {width: 100px; height: 100px; background-color: tomato;
+            position: absolute;
+            /* 부모와 자식의 사이즈가 모두 고정 사이즈일 때 */
+            /* left: 200px;
+            top: 100px; */
+
+            /* 부모의 사이즈가 정해지지 않았을 때 */
+            left: 50%;  /* 부모의 반만큼씩 가운데 기준점 */
+            top: 50%;
+            margin: -50px 0 0 -50px;    /* 자식의 반만큼씩 마진으로 당겨줌 */
+        }
+
+        #mom02 {width: 70%; height: 300px; background-color: lightgray; margin-bottom: 30px; position: relative;}
+        #son02 {width: 20%; height: 100px; background-color: tomato;
+            position: absolute; /* 부모의 정가운데 기준점 세우기 */
+            left: 50%;
+            top: 50%;
+            /* margin: -50px 0 0 -10%; */
+            transform: translate(-50%,-50%); /* 자식의 반만큼씩 이동(당겨주기) */
+        }
+
+        #mom03 {width: 500px; height: 300px; background-color: lightgray; margin-bottom: 30px;
+            display: flex;  /* 자식의 배치 방식을 flex로 변경 */
+            justify-content: center;    /* 자식을 주축 가운데 배치 */
+            align-items: center;        /* 자식을 교차축 가운데 배치 */
+        }
+        #son03 {width: 100px; height: 100px; background-color: tomato;}
+    </style>
+</head>
+<body>
+    <div id="mom01">
+        <div id="son01">margin</div>
+    </div>
+    <div id="mom02">
+        <div id="son02">transform</div>
+    </div>
+    <div id="mom03">
+        <div id="son03">flex</div>
+    </div>
+</body>
+</html>

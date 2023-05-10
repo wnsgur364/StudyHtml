@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* css 초기화 */
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+
+/* #wrap {width: 1200px; height: 1240px; background-color: rgba(0,0,0,.1); margin: auto;}
+#header {width: 1200px; height: 100px; background-color: rgba(255,0,0,.1);}
+#lnb {width: 1200px; height: 40px; background-color: rgba(0,255,0,.1);}
+#lnb li {width: 200px; height: 40px; background-color: rgba(0,0,0,.1); float: left;}
+#main_visual {width: 1200px; height: 600px; background-color: rgba(0,0,255,.1);}
+#contents {width: 1200px; height: 400px; background-color: rgba(255,0,255,.1);}
+.banner {width: 600px; height: 200px; background-color: rgba(0,0,0,.1); float: left;}
+#footer {width: 1200px; height: 100px; background-color: rgba(0,255,255,.1);} */
+
+
+/* 태블릿버전 미디어쿼리 */
+/* @media screen and (min-width: 768px) and (max-width: 1199px) {
+    #wrap {width: 768px; height: 1040px;}
+    #header {width: 768px; height: 60px;}
+    #lnb {width: 768px; height: 80px;}
+    #lnb li {width: 256px;}
+    #main_visual {width: 768px; height: 400px;}
+    #contents {width: 768px;}
+    .banner {width: 384px;}
+    #footer {width: 768px;}
+} */
+
+
+/* 모바일버전 미디어쿼리 */
+/* @media screen and (max-width: 767px) {
+    #wrap {width: 360px; height: 1380px;}
+    #header {width: 360px; height: 60px;}
+    #lnb {width: 360px; height: 120px;}
+    #lnb li {width: 180px;}
+    #main_visual {width: 360px; height: 300px;}
+    #contents {width: 360px; height: 800px;}
+    .banner {width: 360px;}
+    #footer {width: 360px;}
+} */
+
+
+
+
+
+#wrap {width: 1200px; height: 1240px; background-color: rgba(0,0,0,.1); margin: auto;}
+#header {width: 100%; height: 100px; background-color: rgba(255,0,0,.1);}
+#lnb {width: 100%; height: 40px; background-color: rgba(0,255,0,.1);}
+#lnb li {width: 200px; height: 40px; background-color: rgba(0,0,0,.1); float: left;}
+#main_visual {width: 100%; height: 600px; background-color: rgba(0,0,255,.1);}
+#contents {width: 100%; height: 400px; background-color: rgba(255,0,255,.1);}
+.banner {width: 600px; height: 200px; background-color: rgba(0,0,0,.1); float: left;}
+#footer {width: 100%; height: 100px; background-color: rgba(0,255,255,.1);}
+
+
+/* 태블릿버전 미디어쿼리 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #wrap {width: 768px; height: 1040px;}
+    #header {height: 60px;}
+    #lnb {height: 80px;}
+    #lnb li {width: 256px;}
+    #main_visual {height: 400px;}
+    .banner {width: 384px;}
+}
+
+
+/* 모바일버전 미디어쿼리 */
+@media screen and (max-width: 767px) {
+    #wrap {width: 360px; height: 1380px;}
+    #header {height: 60px;}
+    #lnb {height: 120px;}
+    #lnb li {width: 180px;}
+    #main_visual {height: 300px;}
+    #contents {height: 800px;}
+    .banner {width: 100%;}
+}

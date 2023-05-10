@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+
+#wrap {width: 960px; height: 1460px; background-color: rgba(0,0,0,.1); margin: auto;}
+
+#header {width: 100%; height: 150px; background-color: rgba(255,0,0,.1); margin-bottom: 10px; position: relative;}
+/* #header h1,
+#header p {height: 60px;} */
+#header h1,
+#header p {padding-left: 10px;}
+/* block요소에 너비가 지정되지 않은 경우, 패딩을 넣어도 늘어나지 않고 부모요소를 꽉 채운다. */
+#lnb {width: 100%; height: 30px; background-color: rgba(0,255,0,.1); position: absolute; bottom: 0;}
+#lnb li {width: 192px; height: 30px; background-color: rgba(0,0,0,.1); float: left;}
+#lnb li:nth-child(2n) {background-color: rgba(0,0,0,.2);}
+
+#main_visual {width: 100%; height: 600px; background-color: rgba(0,0,255,.1);}
+.contents {width: 220px; height: 280px; background-color: rgba(255,100,0,.1); text-align: center; float: left; margin: 10px;}
+.contents h4 {margin: 20px 0 10px;}
+.cont_img {width: 220px; height: 150px; background-color: rgba(255,100,0,.1);}
+
+#footer {width: 100%; height: 100px; background-color: rgba(0,255,255,.1); clear: both;}
+
+
+/* 태블릿버전 미디어쿼리 */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    #wrap {width: 600px; height: 1857px;}
+    #lnb li  {width: 120px;}
+    #main_visual {height: 400px;}
+    .contents {width: 280px;}
+    .cont_img {width: 280px;}
+}
+
+/* 모바일버전 미디어쿼리 */
+@media screen and (max-width: 599px) {
+    #wrap {width: 360px; height: 2910px;}
+    #header {height: 270px;}
+    #lnb {height: 150px;}
+    #lnb li {width: 360px;}
+    #main_visual {height: 200px;
+        /* margin-bottom: 10px; 첫번째방법*/
+    }
+    .contents {width: 340px;
+        /* margin-top: 0; 첫번째방법*/
+        float: none;
+        /* 두번째방법. float이 적용된 요소끼리는 상하 마진이 중첩되지 않으나, 기존의 block요소들의 margin값은 상하에서 중첩된다(겹쳐진다). float이 적용되지 않은 상태로 하려면 float: none을 해주면 된다. */
+    }
+    .cont_img {width: 340px;}
+}

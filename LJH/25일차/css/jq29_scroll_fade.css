@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+
+body {padding-top: 50px;}
+/* 헤더가 fixed되면 뒤에 있는 내용이랑 겹쳐지기 때문에 헤더의 높이만큼 여백 부여 */
+
+header {width: 100%; height: 50px; background-color: brown; color: #fff; position: fixed; left: 0; top: 0; transition: .5s;}
+
+.header_up {top: -50px;}
+/* 스크롤 내렸을 때 헤더가 없어질 수 있도록 헤더의 높이값만큼 top에서 빼준다.(위로 없앰) */
+
+#container {width: 100%; height: 5000px; background-color: burlywood;}
+
+.fadeInLeft {width: 100%; height: 500px; padding-top: 200px; font-size: 200px; text-align: center; border-bottom: 1px solid black;
+    opacity: 0;
+    margin-left: -300px;
+}

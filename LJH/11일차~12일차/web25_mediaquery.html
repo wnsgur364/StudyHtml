@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        body {color: #fff; font-size: 30px; font-weight: bold;}
+
+        @media screen and (max-width: 767px) {
+            body {background-color: red;}
+        }
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {background-color: green;}
+        }
+        @media screen and (min-width: 960px) {
+            body {background-color: blue;}
+        }
+    </style>
+</head>
+<body>
+    너비 767px 이하에서는 빨간색 배경인 모바일버전<br>
+    너비 768px 이상부터 959px 까지는 초록색 배경인 태블릿버전<br>
+    너비 960px 이상부터는 파란색 배경인 데스크탑버전
+</body>
+</html>

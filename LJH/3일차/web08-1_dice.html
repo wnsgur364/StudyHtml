@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 만들기</title>
+    <style>
+        /* 자식요소가 position: absolute로 부모요소를 기준으로 위치를 잡을 수 있게 하려면 부모요소에 position: relative가 설정되어야 한다.(부모요소에 position이 지정되어있지 않은 경우-position속성값이 static인 경우-차례차례 더 상위요소에서 relative를 찾아 그 요소를 기준으로 잡는다.) */
+        * {margin: 0; padding: 0;}
+
+        #box01 {width: 300px; height: 300px; background-color: cadetblue; position: relative; border-radius: 30px;}
+        #dot01 {width: 80px; height: 80px; background-color: antiquewhite; position: absolute;
+            /* top: 110px; left: 110px; */
+            top: 50%; left: 50%; margin: -40px 0 0 -40px;
+            /* 요소를 부모요소의 정중앙에 위치시킬 경우 부모요소의 1/2만큼 왼쪽, 위쪽에서 지정(기준점을 가운데에 고정)한 다음 요소의 1/2만큼 당겨준다. */
+            /* border-radius: 40px; */
+            border-radius: 50%;
+        }
+
+        #box02 {width: 300px; height: 300px; background-color: brown; position: relative; border-radius: 30px;}
+        #dot02_01 {width: 80px; height: 80px; background-color: burlywood; position: absolute; left: 15px; top: 15px; border-radius: 40px;}
+        #dot02_02 {width: 80px; height: 80px; background-color: aquamarine; position: absolute; right: 15px; bottom: 15px; border-radius: 40px;}
+
+        #box03 {width: 300px; height: 300px; background-color: darkgreen; border-radius: 30px; position: relative;}
+        #dot03_01 {width: 80px; height: 80px; background-color: aqua; border-radius: 40px; position: absolute; left: 15px; top: 15px;}
+        #dot03_02 {width: 80px; height: 80px; background-color: aqua; border-radius: 40px; position: absolute; left: 110px; top: 110px;}
+        #dot03_03 {width: 80px; height: 80px; background-color: aqua; border-radius: 40px; position: absolute; right: 15px; bottom: 15px;}
+
+
+        #box04 {width: 300px; height: 300px; border-radius: 30px; background-color: darkorange; position: relative;}
+        #dot04_01 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; top: 15px;}
+        #dot04_02 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; bottom: 15px;}
+        #dot04_03 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; top: 15px;}
+        #dot04_04 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; bottom: 15px;}
+
+        #box05 {width: 300px; height: 300px; border-radius: 30px; background-color: crimson; position: relative;}
+        #dot05_01 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; top: 15px;}
+        #dot05_02 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; bottom: 15px;}
+        #dot05_03 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; top: 15px;}
+        #dot05_04 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; bottom: 15px;}
+        #dot05_05 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 110px; top: 110px;}
+
+        #box06 {width: 300px; height: 300px; border-radius: 30px; background-color: darkcyan; position: relative;}
+        #dot06_01 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; top: 15px;}
+        #dot06_02 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; bottom: 15px;}
+        #dot06_03 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; top: 15px;}
+        #dot06_04 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; bottom: 15px;}
+        #dot06_05 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; left: 15px; top: 110px;}
+        #dot06_06 {width: 80px; height: 80px; background-color: antiquewhite; border-radius: 50%; position: absolute; right: 15px; top: 110px;}
+    </style>
+</head>
+<body>
+    <div id="box01">
+        <div id="dot01"></div>
+    </div>
+    <div id="box02">
+        <div id="dot02_01"></div>
+        <div id="dot02_02"></div>
+    </div>
+    <div id="box03">
+        <div id="dot03_01"></div>
+        <div id="dot03_02"></div>
+        <div id="dot03_03"></div>
+    </div>
+    <div id="box04">
+        <div id="dot04_01"></div>
+        <div id="dot04_02"></div>
+        <div id="dot04_03"></div>
+        <div id="dot04_04"></div>
+    </div>
+    <div id="box05">
+        <div id="dot05_01"></div>
+        <div id="dot05_02"></div>
+        <div id="dot05_03"></div>
+        <div id="dot05_04"></div>
+        <div id="dot05_05"></div>
+        <div id="dot05_06"></div>
+    </div>
+    <div id="box06">
+        <div id="dot06_01"></div>
+        <div id="dot06_02"></div>
+        <div id="dot06_03"></div>
+        <div id="dot06_04"></div>
+        <div id="dot06_05"></div>
+        <div id="dot06_06"></div>
+    </div>
+</body>
+</html>

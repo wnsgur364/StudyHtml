@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 단위</title>
+    <style>
+        div {width: 200px; height: 100px;}
+
+        #hex6 {background-color: #ffff00;}
+        /* rgb색상을 10진수로 나타내는 방식. 헥사코드 사용시 앞에 #을 붙여줘야 한다.
+        #RRGGBB
+        (가장 어두움) 0~9,A~F (가장 밝음) 숫자 또는 문자
+        0은 빛이 없는 상태(검정)
+        F는 빛이 가장 강한 상태(원색)
+        ex) #aaaaaa = 중간 회색
+        */
+
+        #hex3 {background-color: #f0f;}
+        /* #f0f = #ff00ff (마젠타)
+        헥사코드의 RR, GG, BB가 동일한 숫자 또는 문자로 되어있을 경우 #RGB로 줄여서 사용이 가능하다.
+        ex) #fff = #ffffff (흰색)
+            #000 = #000000 (검정)
+        */
+
+        #hex8 {background-color: #5b8f31a8;}
+        /* 헥사코드 6자리 뒤에 투명도 코드 2자리가 더 붙어 8자리 헥사코드로 사용할 수 있다.
+        (하위버전 브라우저 지원여부 확인 후 사용할 것) */
+
+        #rgb {background-color: rgb(255,0,0);}
+        /* rgb(RED,GREEN,BLUE)
+        (가장 어두움) 0 ~ 255 (가장 밝음) 숫자로 나타냄 */
+
+        #rgba {background-color: rgba(255,0,0,1);}
+        /* rgba(RED,GREEN,BLUE,ALPHA)
+        (가장 어두움) 0 ~ 255 (가장 밝음) 숫자로 나타냄
+        알파값은 투명도
+        (가장 투명함) 0 ~ 1 (가장 불투명함) 사이의 숫자
+        0.5 = 50%
+        0.75 = 75%
+        0.8 이런 경우 0을 생략하고 .8 이렇게 사용할 수 있다. */
+
+        #hsl {background-color: hsl(60,100%,80%);}
+        /* hsl(hue,saturation,lightness)
+        hue(색상) : 빨주노초.. 0 ~ 360 색상환 각도의 숫자
+        saturation(채도) : (가장 탁함) 0 ~ 100% (가장 맑음)
+        lightness(명도) : (가장 어두움) 0 ~ 100% (가장 밝음) */
+
+        #hsla {background-color: hsla(0,50%,80%,.5);}
+
+        /* color picker, color scheme 등 검색 후 사용 */
+
+        #rgba_05 {background-color: rgba(255,0,0,.5);}
+        #opacity_05 {background-color: red; opacity: .5;}
+        /* opacity : 투명도 속성. 요소 자체의 투명도를 조절한다.
+        값은 (가장 투명함) 0 ~ 1 (가장 불투명함) */
+
+    </style>
+</head>
+<body>
+    <div id="hex6">6자리 헥사코드</div>
+    <div id="hex3">3자리 헥사코드</div>
+    <div id="hex8">8자리 헥사코드</div>
+    <div id="rgb">rgb코드</div>
+    <div id="rgba">rgba코드</div>
+    <div id="hsl">hsl코드</div>
+    <div id="hsla">hsla코드</div>
+    <hr>
+    <div id="rgba_05">rgba 투명도 50%</div>
+    <div id="opacity_05">opacity 투명도 50%</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 가나초콜릿 */
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 에스코어드림(본문) */
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* CSS 초기화 */
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'S-CoreDream-3Light';}
+
+
+
+#wrap {width: 100%; margin: auto;}
+
+#header {width: 100%; height: 120px; background-color: #333; text-align: center; padding-top: 20px; box-sizing: border-box;}
+
+#lnb {width: 100%; height: 120px; font-family: 'ghanachoco';}
+#lnb li {width: 100%; height: 30px; text-align: center;}
+#lnb li a {width: 100%; height: 100%; background-color: crimson; color: #fff; display: block; padding-top: 6px; box-sizing: border-box;}
+
+#main_visual {width: 100%; height: 250px; margin-bottom: 10px;
+    background-image: url("../img/main_sac_img.jpg");
+    background-position: center;
+    background-size: cover;
+    }
+#main_visual span {display: block; text-indent: -9999px;}
+
+.main_img {width: 94%; margin: 0 auto 20px; position: relative;}
+.main_img a {width: 100%; height: 100%; display: block; position: absolute; left: 0; top: 0; color: orange;}
+.main_img img {width: 100%;}
+
+.main_img_caption {width: 100%; background-color: rgba(0,0,0,.8); position: absolute; bottom: 0; text-align: center; padding: 20px; box-sizing: border-box; font-size: 13px;}
+.main_img_caption h4 {margin-bottom: 10px; font-size: 15px;}
+.main_img_caption h4,
+.main_img_caption p {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+/* 말줄임표 세트 ※block속성 요소에 적용 해야함
+white-space: nowrap; 줄바꿈 여부 설정
+overflow: hidden; 넘치는 부분 가려서 표시
+text-overflow: ellipsis; 글자 넘침 말줄임표(...)으로 처리 */
+
+#mobile_btn {width: 240px; height: 60px; margin: 50px auto;
+    /* font-size: 0; */
+}
+#mobile_btn ul {display: flex; justify-content: space-between;}
+#mobile_btn li {width: 60px; height: 60px;
+    /* display: inline-block; font-size: 16px; */
+    /* float: left; */
+    /* margin-right: 30px; 첫번째 방법 */
+}
+/* #mobile_btn li:last-child {margin-right: 0;} 첫번째 방법 */
+/* #mobile_btn li:nth-child(2) {margin: 0 30px;} 두번째 방법 */
+/* #mobile_btn li:not(:last-child) {margin-right: 30px;} 세번째 방법 */
+#mobile_btn li a {width: 60px; height: 60px; display: block; background-color: crimson; color: antiquewhite; border-radius: 50%; text-align: center; padding-top: 14px; box-sizing: border-box; font-size: 22px;}
+#mobile_btn li a span {display: block; text-indent: -9999px;}
+
+#footer {width: 100%; background-color: #131111; padding: 20px 10px; box-sizing: border-box; color: #aaa; text-align: center; font-size: 14px;}
+#footer_logo {width: 100%; height: 60px; margin-bottom: 10px;}
+#copyright {width: 100%;}
+
+
+
+/* 태블릿 버전 */
+@media screen and (min-width: 600px) {
+
+    #wrap {width: 100%;}
+    #lnb {height: 30px;}
+    #lnb li {width: 25%; float: left;}
+    #main_visual {height: 300px; margin-bottom: 50px;}
+    .main_img {width: 47%; height: 400px; float: left; margin: 0 1.5% 50px; /*overflow: hidden;*/}
+    .main_img img {width: 100%; height: 100%; object-fit: cover;}
+    /* object-fit: cover;
+    이미지태그에 너비, 높이를 지정한다음 속성을 적용하면 그 크기에 맞게 꽉 채우면서 비율이 안맞는 부분은 잘라서 보여준다.(background-size: cover; 속성과 같은 원리)
+    fill(기본값)
+    */
+    #mobile_btn {display: none;}
+    #footer {clear: both; display: flex; justify-content: space-between; padding: 20px;}
+    #footer_logo {width: 25%; /*float: left;*/}
+    #footer_logo img {width: 100%;}
+    #copyright {width: 70%; /*float: left;*/ text-align: left;}
+}
+
+
+/* 데스크탑 버전 */
+@media screen and (min-width: 960px) {
+
+    #wrap {width: 960px;}
+    #lnb li a {transition: .5s;}
+    #lnb li a:hover {background-color: rgb(156, 3, 33);}
+    #main_visual {height: 500px;}
+    .main_img {width: 225px; height: 280px; margin: 0 20px 50px 0;}
+    .main_img:nth-of-type(4n) {margin-right: 0;}
+    .main_img a {opacity: 0; transition: .5s;}
+    .main_img a:hover {opacity: 1;}
+    #footer_logo {width: 200px; /*float: left;*/}
+    #copyright {width: 700px; /*float: left;*/}
+
+}
+
+/* ※ 미디어쿼리 중단점을 min-width로만 작성시 CSS상의 작성 순서를 M -> T- > D 순으로 작성해야 함(작은것부터 큰 순서대로) */

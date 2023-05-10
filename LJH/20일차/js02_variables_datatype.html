@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수(Variables)와 자료형(Data type)</title>
+</head>
+<body>
+    <script>
+
+        // 변수 : 변하는 데이터(값)를 저장할 수 있는 메모리 공간. 변수에는 데이터가 한 개만 저장된다. 새로운 데이터가 들어오면 기존값은 지워짐(덮어씌움)
+        // 문자형(String type), 숫자형(Number type), 논리형(Boolean type), 비워진 데이터(Null & Undefined)
+
+        // 변수명 작성시 주의사항
+        // 1. 숫자가 앞에 오면 안됨. 첫글자로는 $, _, 영문 허용(한글 X)
+        // 2. 대소문자를 구분한다. name과 Name은 다른 변수임
+        // 3. 변수는 소문자로 시작 var test;
+        // 4. 상수는 대문자로 시작 const Hello;
+        // 5. 여러 단어의 조합 낙타표기법(Camel case)적용 : 첫단어 이후부터 단어의 첫글자를 대문자로 작성
+        //    ex: var testNumber;
+        // 6. 자바스크립트의 예약어(미리 정의된 변수명) 사용 안됨
+        //    ex: var var;
+
+        // var box;    // 변수의 선언(사용 전 만들어놓기)
+        // document.write(box);    // undefined. box라는 변수는 만들었으나 아직 무엇이 들어갈지 결정되지 않은 상태
+
+        // box = 100;  // 변수의 초기화
+        // document.write(box);    // 100. box라는 변수에 100을 저장(대입)
+
+        // var box = 200;  // 변수의 선언과 초기화 동시에 가능. box 변수 재선언(var 변수는 재선언 가능)
+        // document.write(box);    // 200. 
+
+        // box = 300;  // 변수 업데이트
+        // document.write(box);    // 300. 변수 하나에는 한 개의 데이터만 저장이 가능하다. 기존 변수값은 지워지고 새로운 값이 저장된다.
+
+
+
+
+        // let box1;
+        // document.write(box1);
+
+        // box1 = 10;
+        // document.write(box1);
+
+        // // let box1 = 200;                  // 오류. let 변수는 재선언 불가능
+        // // document.write(box1);
+
+        // box1 = 20;                          // let 변수는 업데이트는 가능
+        // document.write(box1);
+
+
+
+
+        // const box2 = 3;
+        // document.write(box2);
+
+        // box2 = 4;                            // 오류. const(상수)는 업데이트 불가. 변경 안됨.
+        // document.write(box2);                // ex: id.. db명...날짜..
+
+
+
+        // 자료형----------------------
+        // 문자형 데이터(String type) : 큰or작은 따옴표로 감싸주어야 한다. HTML태그를 포함해 출력 가능
+        // var s = "js";
+        // var haha = "하하<br>";
+        // var numberOne = "1";
+        // document.write(s);
+        // document.write(haha);
+        // document.write(numberOne);
+
+        // 숫자형 데이터(Number type) : 숫자형은 그냥 숫자만 작성
+        // var s = 100;
+        // document.write(s);
+
+        // 논리형 데이터(Boolean type) : true(참), false(거짓) 두 개의 값을 가진다. 값을 비교할 때 주로 사용
+        // 0, "", null, undefinde 는 false. 나머지는 모두 true를 반환.
+        // var a = true;               // true
+        // var b = 10 >= 100;          // false
+        // var c = Boolean("hello");   // true
+        // var d = Boolean(0);         // false
+        // document.write(a);
+        // document.write(b);
+        // document.write(c);
+        // document.write(d);
+
+        // null & undefined
+        // undefined : 변수에 값이 등록되기 전의 기본값
+        // null : 자료형이 지정되지 않은 상태. 아무것도 참조하지 않는다는 의미. 주로 객체를 담을 변수를 초기화할 때(비울 때) 사용
+
+        // typeof : 데이터의 자료형이 어떤 것인지 알고싶을 때 사용
+        var numTwo = "2";
+        document.write(typeof numTwo);  // string
+
+        var t = Number(numTwo);         // 문자형 숫자 데이터를 숫자형 데이터로 형변환 하고싶은 경우 Number() 함수를 사용. 반대로 숫자에서 문자로 바꾸고 싶은 경우 String() 함수를 이용하면 된다.
+        document.write(typeof t);       // number
+
+
+
+
+    </script>
+</body>
+</html>
